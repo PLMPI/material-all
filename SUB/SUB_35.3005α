@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<!--<?xml-model href="https://raw.githubusercontent.com/erc-dharma/project-documentation/master/schema/latest/DHARMA_CritEdSchema.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/erc-dharma/project-documentation/master/schema/latest/DHARMA_CritEdSchema.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>-->
+<!--<?xml-model href="./PLMPI_v01.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="eng">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>SUB 35.3005a
+
+            </title>
+            <author>
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author>
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <!--<idno type="filename"></idno>  -->
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Hamburg, Germany</settlement>
+                  <repository>Staats- und Universitätsbibliothek (SUB), Hamburg Universität </repository>
+                  <idno>SUB_35.3005α</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="san-Latn"
+                        >Taittirīya­samhitā</foreign>, <foreign xml:lang="san-Latn">kāṇḍa</foreign>
+                     4 (<foreign xml:lang="san-Latn">padapāṭha</foreign>).</summary>
+               </msContents>
+
+               <physDesc>
+                  <p>The colophon is placed at the centre of the line. The date corresponds to a
+                     very early date (<date>1577</date>), but the writing style suggests a far later
+                     date (19th century?).</p>
+               </physDesc>
+            </msDesc>
+            <bibl>Cod. Palmbl. I 5 (see VOHD II,4, entry 1123)</bibl>
+         </sourceDesc>
+      </fileDesc>
+
+      <encodingDesc>
+   <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The Palm-Leaf Manuscript Profiling Initiative (PLMPI). The research of the project – funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany’s Excellence Strategy – EXC 2176 “Understanding Written Artefacts: Material, Interaction and Transmission in Manuscript Cultures,” project no. 390893796 – was conducted within the scope of (1) the Centre for the Study of Manuscript Cultures (CSMC) at Universität Hamburg and (2) the project Texts Surrounding Texts (TST) Satellite Stanzas, Prefaces and Colophons in South-Indian Manuscripts (collections of the Paris BnF and Hamburg SUB) funded by ANR & DFG (2019–2023)</p>
+         </projectDesc>
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="SUB353005a">
+         <graphic url="to_be_filled"/>
+<!-- UPDATE the link once the release is made official -->
+         </surface>
+      <surface xml:id="kku_fig">
+         <graphic url="to_be_filled"/>
+      </surface>
+      <surface xml:id="ym_fig">
+         <graphic url="to_be_filled"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="prose" xml:lang="tam-Latn">
+            <head>Edition</head>
+      <ab>
+         <lb type="inline" n="36v4" facs="#SUB353005a"  />
+               <anchor type="date"/>
+               <date type="cyclical" when="1577-02-03" resp="part:mafr">
+             <note type="date">Other possible dates: <date when="1817-02-17">Feb 17, 1817</date> or <date when="1867-02-18">Feb 18, 1867</date></note>
+             
+               <seg type="date-jy" subtype="v-e-mk">
+                  <hi rend="grantha"
+                     >dhātu</hi>ṉāma<hi rend="grantha">saṃvatsara</hi></seg>
+               <seg type="date-sm" subtype="v-mk">mā<hi rend="grantha">śimāsaṃ</hi></seg>
+               <seg type="date-md" subtype="v"><num type="digit-o">8</num></seg>
+               <seg type="date-wd" subtype="v-mk"> ṉāyattikiḻamai</seg>
+               <seg type="date-o" subtype="v-e" n="dayTime">cāyintaṟam</seg>
+               <seg type="date-o" subtype="mk-v" n="hour">maṇi <num type="digit-c">3</num><abbr type="suffix"
+                     facs="#kku_fig">kku</abbr></seg>
+               </date>
+         
+               <anchor type="copFor"/>
+               <seg type="copFor-end" subtype="eḻuti-muki"> eḻiti mukiñcittu</seg>
+             </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p>It was fully copied on the year called Dhātu, month of Māśi, 8th day, Sunday, three
+               hours into the evening.</p>
+         </div>
+         <div >
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+             </body>
+   </text>
+</TEI>
