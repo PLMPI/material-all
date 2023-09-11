@@ -1,5 +1,5 @@
 # material-all
-This repository contains the colophons divided into folders according to the name of the physical repository where they are stored. 
+This repository contains the encoded colophons; they are divided into folders named through the siglum of the physical repository where they are stored. 
 
 **REPOSITORIES** (2023-09-04)
 1. **SUB**: Staats- und Universitätsbibliothek,Hamburg (Germany)
