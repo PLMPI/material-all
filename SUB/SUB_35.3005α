@@ -60,7 +60,6 @@
 
       <encodingDesc>
    <projectDesc>
-            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
             <p>The Palm-Leaf Manuscript Profiling Initiative (PLMPI). The research of the project – funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany’s Excellence Strategy – EXC 2176 “Understanding Written Artefacts: Material, Interaction and Transmission in Manuscript Cultures,” project no. 390893796 – was conducted within the scope of (1) the Centre for the Study of Manuscript Cultures (CSMC) at Universität Hamburg and (2) the project Texts Surrounding Texts (TST) Satellite Stanzas, Prefaces and Colophons in South-Indian Manuscripts (collections of the Paris BnF and Hamburg SUB) funded by ANR & DFG (2019–2023)</p>
          </projectDesc>
          <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
