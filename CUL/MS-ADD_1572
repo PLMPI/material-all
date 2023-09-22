@@ -50,12 +50,17 @@
       </fileDesc>
       <encodingDesc>
    <projectDesc>
-            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
-            <p>The Palm-Leaf Manuscript Profiling Initiative (PLMPI). The research of the project – funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany’s Excellence Strategy – EXC 2176 “Understanding Written Artefacts: Material, Interaction and Transmission in Manuscript Cultures,” project no. 390893796 – was conducted within the scope of (1) the Centre for the Study of Manuscript Cultures (CSMC) at Universität Hamburg and (2) the project Texts Surrounding Texts (TST) Satellite Stanzas, Prefaces and Colophons in South-Indian Manuscripts (collections of the Paris BnF and Hamburg SUB) funded by ANR & DFG (2019–2023)</p>
+         
+            <p>The Palm-Leaf Manuscript Profiling Initiative (PLMPI). The research of the project – funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany’s Excellence Strategy – EXC 2176 “Understanding Written Artefacts: Material, Interaction and Transmission in Manuscript Cultures,” project no. 390893796 – was conducted within the scope of (1) the Centre for the Study of Manuscript Cultures (CSMC) at Universität Hamburg and (2) the project Texts Surrounding Texts (TST) Satellite Stanzas, Prefaces and Colophons in South-Indian Manuscripts (collections of the Paris BnF and Hamburg SUB) funded by ANR &amp; DFG (2019–2023)</p>
          </projectDesc>
-
-         <schemaRef type="guide" key="PLMPI_template"  url="to_be_filled_in_later"/>
-         <!-- UPDATE the link once the release is made official -->
+ <!-- <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+           <!-\- UPDATE the link once the release is made official -\->
+      	<listPrefixDef>
+         	<prefixDef ident="pers" matchPattern="([a-zA-Z]+)" replacementPattern="persons.xml#$1">
+            	<p>Internal URIs using the part prefix to point to person elements in the
+                  	<ref>persons</ref> file.</p>
+         	</prefixDef>
+      	</listPrefixDef>-->
               </encodingDesc>
    </teiHeader>
    <facsimile>
