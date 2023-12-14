@@ -1,1 +1,918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:transform version="2.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xpath-default-namespace="http://www.tei-c.org/ns/1.0"
+    exclude-result-prefixes="#all">
+    
+           
+    <!--:output method="html"/>   -->
+    <xsl:template match="/"><!--root element node-->
+        <html>
+            <head>
+        
+                    <link rel="stylesheet" href="PLMPI_base.css"/>
+                <title></title>
+            </head>
+            <body>
+                <xsl:apply-templates select="child::node()"/><!-- apply temple to all of the children nodes in the entire document-->
+            </body>
+        </html>
+    </xsl:template>
+    
+    
+    <xsl:template match="title">
+        <h1 class="h1"><xsl:apply-templates/></h1>
+                </xsl:template>
+    
+    
+    <xsl:template match="author">
+            <p class="pauthor">
+                <b><xsl:text>Author: </xsl:text></b>
+                <xsl:apply-templates/>
+            </p>   
+    </xsl:template>
+    
+    <xsl:template match="publicationStmt">
+        <p class="tei-header"><xsl:apply-templates/></p>
+    </xsl:template>
+    
+  <!--  <xsl:template match="teiHeader//msDesc">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>-->
+    
+    <xsl:template match="settlement">
+        <p class="pmeta"><b><xsl:text>Settlement: </xsl:text></b><xsl:apply-templates/></p>
+    </xsl:template>
+    
+    
+   
+    <xsl:template match="repository">
+        <p class="pmeta"><b><xsl:text>Repository: </xsl:text></b><xsl:apply-templates/></p>
+    </xsl:template>
+    
+    <xsl:template match="idno">
+        <p class="pmeta"><b><xsl:text>Reference number: </xsl:text></b><xsl:apply-templates/></p>
+    </xsl:template>
+    
+    <xsl:template match="projectDesc">
+        <p class="teiHeader" style="display:none"><xsl:apply-templates/></p>
+    </xsl:template>
+    
+    <xsl:template match="foreign"> <!--tei::-->
+        <xsl:variable name="ref" select="substring-after(@facs, '#')"/>
+        <xsl:choose>
+            <xsl:when  test="@facs"> <!--da capire come fare cosa utile per i suffissi tipo kku etc, in questo "when you test type=suffix"-->
+                <i>     <a  class="five" href="{//surface[@xml:id = ref]/graphic/@url}" target="_blank"><xsl:apply-templates/></a></i>
+            </xsl:when>
+            <xsl:otherwise>
+                <i><xsl:apply-templates/></i>
+            </xsl:otherwise>
+        </xsl:choose>
+        
+    </xsl:template>
+      
+        
+
+  
+  
+    <xsl:template match="listPrefixDef">
+        <p class="none"><xsl:apply-templates/></p>
+    </xsl:template>
+   
+   
+    <xsl:template match="teiHeader//listNym">
+        <p class="none"><xsl:apply-templates/></p>
+    </xsl:template>
+   
+    <xsl:template match="teiHeader//listOrg">
+        <p class="none"><xsl:apply-templates/></p>
+    </xsl:template>
+    
+    <xsl:template match="teiHeader//revisionDesc">
+        <p class="none"><xsl:apply-templates/></p>
+    </xsl:template>
+    
+    
+ <!--   <xsl:template match="TEI//msContents">
+        <xsl:choose>
+                 
+        <xsl:when test="summary">
+        <details class="note"><summary>Notes</summary> 
+            <xsl:apply-templates/></details></xsl:when>
+            <xsl:when test="msItem"><span class="p"><xsl:apply-templates/></span></xsl:when>
+        </xsl:choose>
+    </xsl:template>-->
+    
+    <xsl:template match="TEI//summary">
+      
+                <details class="note"><summary>Notes</summary> 
+                    <xsl:apply-templates/></details>
+          
+    </xsl:template>
+    
+    <xsl:template match="TEI//msItem">
+        <span><xsl:apply-templates/></span>
+    </xsl:template>
+    
+    
+    <xsl:template match="TEI//body"> <!--this is the actual xml element body, not the html body-->
+        <div class="body"><xsl:text></xsl:text><xsl:apply-templates/></div>
+    </xsl:template>
+    
+    
+    
+    
+  <xsl:template match="div">      
+      <xsl:apply-templates/>
+      <!--xsl:choose>
+          <xsl:when test="@type='footer'">
+              <span class="footer"> <xsl:apply-templates/></span></xsl:when>
+          <xsl:otherwise>
+                      <p class="div"><xsl:apply-templates/></p>             
+                     </xsl:otherwise>
+      </xsl:choose-->
+    
+      
+      
+    <!--   <xsl:if test="head"><p style="text:align=center"><xsl:apply-templates/></p></xsl:if>
+                 <xsl:choose> 
+                                  <xsl:when test="@xml:lang='tam-Latn'">                                    
+                                       <p   class="div"><i>  <xsl:apply-templates/></em></p></xsl:when>
+                                     <xsl:otherwise><p class="div"><xsl:apply-templates/>
+                                     </p></xsl:otherwise>    </xsl:choose>-->
+  </xsl:template>
+        
+
+<!--<xsl:variable name="anchornames"> <!-\-Thansk to Dr Charles Li for his suggestion on how to solve the issue of display-\->
+        <entry key="copFor">copying formula</entry>
+        <entry key="item">item</entry>
+    <entry key="date">date</entry>
+    <entry key="apo">apology</entry>
+    <entry key="own">ownership</entry>
+    <entry key="copPlace">place of copying</entry>
+    <entry key="ownScribe">owner and scribe</entry>
+    <entry key="phil">philology</entry>
+   <entry key="scribe">scribe</entry>
+    <entry key="appr">appraisal</entry>
+    <entry key="rec">reciter</entry>
+    <entry key="inv">//</entry>
+    </xsl:variable>
+    <xsl:template match="div[@type='footer']">
+        <span class="footer" >
+            <xsl:for-each select="//anchor">
+                <xsl:variable name="type" select="@type"/>
+                <xsl:choose>
+                    
+                    <xsl:when test="@type='inv'">
+                        <xsl:value-of select="$anchornames/node()[@key=$type]"/>
+                    </xsl:when>   
+                    
+                    <xsl:otherwise>
+                [<xsl:value-of select="$anchornames/node()[@key=$type]"/>]
+                 </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
+        </span>
+    </xsl:template>-->
+    
+    
+    <xsl:variable name="anchornames"> <!--Thansk to Dr Charles Li for his suggestion on how to solve the issue of display-->
+        <entry key="copFor">copying formula</entry>
+        <entry key="item">item</entry>
+        <entry key="date">date</entry>
+        <entry key="apo">apology</entry>
+        <entry key="own">ownership</entry>
+        <entry key="own?">ownership?</entry>
+        <entry key="copPlace">place of copying</entry>
+        <entry key="ownScribe">owner and scribe</entry>
+        <entry key="phil">philology</entry>
+        <entry key="scribe">scribe</entry>
+        <entry key="appr">appraisal</entry>
+        <entry key="rec">reciter</entry>
+        <entry key="inv">//</entry>
+    </xsl:variable>
+    <xsl:template match="anchor[@type='footer']">
+        <span class="div" >
+            <xsl:for-each select="//anchor">
+                <xsl:variable name="type" select="@type"/>
+                <xsl:choose>
+                    
+                    <xsl:when test="@type='inv'">
+                        <xsl:value-of select="$anchornames/node()[@key=$type]"/>
+                    </xsl:when>   
+                    <xsl:when test="@type='footer'">
+                        <span class="none"/>
+                    </xsl:when>   
+                    
+                    
+                    <xsl:otherwise>
+                        [<xsl:value-of select="$anchornames/node()[@key=$type]"/>]
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
+        </span>
+    </xsl:template>
+  
+
+ <xsl:template match="TEI//bibl">
+     <p class="details"><br/><xsl:apply-templates/></p>
+     
+ </xsl:template>
+  
+  <!--  <xsl:template match="cl">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>-->
+    
+    
+    <xsl:template match="TEI//head">
+        <h1 style="text-align:center">
+            <xsl:apply-templates/>
+        </h1>
+    </xsl:template>
+    
+    <xsl:template match="TEI//ab">
+        <p class="ab">
+            <xsl:apply-templates/>
+        </p>
+    </xsl:template>
+    
+    <xsl:template match="TEI//p">
+<xsl:choose>
+        <xsl:when test="@rend='pencil'">
+            <p class="pencil"><xsl:apply-templates/></p></xsl:when>
+    <!-- TRIALS FOR A WAY TO SHOW MODULES IN FOOTER
+        
+        <xsl:when test="date">
+        
+        <a class="footer" href="https://stackoverflow.com/questions/1454337/construct-a-href-using-xslt">
+            <xsl:value-of select="substring-after(lb, '@n')"/></a><xsl:apply-templates/>
+    </xsl:when>-->
+    <xsl:otherwise><p><xsl:apply-templates/></p></xsl:otherwise>
+</xsl:choose>
+    </xsl:template>
+    
+<!-- WE DO NOT USE THIS ANYMORE        
+        <xsl:template match="TEI//pb">
+        
+     <xsl:choose>
+         <xsl:when test="@type='inline'">
+               <xsl:variable name="img-id1" select="substring-after(@facs, '#')"/>
+             <a  class="hovertext2" data-hover="{substring-after(@n, '')}" href="{//surface[@xml:id = $img-id1]/graphic/@url}" target="_blank"><sup><xsl:text>&#9913;</xsl:text><xsl:apply-templates/></sup></a>
+         </xsl:when>
+<!-\-<xsl:otherwise>
+    Strategy to collapse images of mss/colophons above the <div>; not preferred
+                <div class="pages" id="pg">
+                    <xsl:variable name="img-id" select="substring-after(@facs, '#')"/>
+                    <a href="{//surface[@xml:id = $img-id]/graphic/@url}" target="_blank">  <!-\\-@target blank allows the link to be opened in another tab/window-\\->
+                        <button class="btn">&#128247; <xsl:value-of select="substring-after(@n, '')"/>
+                        </button> </a>
+                               </div>
+</xsl:otherwise>      -\->
+     </xsl:choose>
+    </xsl:template>-->
+    
+    
+    <xsl:template match="lb">
+        <xsl:if  test="@facs">
+            <xsl:variable name="img-id1" select="substring-after(@facs, '#')"/>
+            <a  class="hovertext2" data-hover="{substring-after(@n, '')}" href="{//surface[@xml:id = $img-id1]/graphic/@url}" target="_blank"><xsl:apply-templates/></a>
+        </xsl:if>  
+        <xsl:choose>
+            <!--normal [...] display of numbering pattern when there is not need to mark change of folio [so, do not use for first lb where you should link foliation image; for that, use "inline"]-->
+             <xsl:when test="@type='1'">
+                <span class="prose">[<xsl:value-of select="substring-after(@n, '')"/>]<xsl:apply-templates/></span>
+               
+            </xsl:when> 
+                   <!--se si desidera l'hover di qualcosa, basterà aggiungere la class="hovertext1" come sopra-->
+            <xsl:when test="@break='no'">
+                <xsl:text>-</xsl:text><br><xsl:apply-templates/></br>
+            </xsl:when>
+            
+            <!--inline display of numbering pattern, with the option of dipslaying the number by hovering over "|"-->           
+            <xsl:when test="@type='2'">
+                <span class="hovertext1" data-hover="{substring-after(@n, '')}"><xsl:text>|</xsl:text><xsl:apply-templates/></span>
+            </xsl:when>
+            <xsl:when test="@type='3'">  <!--option to display folio change with number appearing in hover on |, plus link to the folio-->
+                <xsl:variable name="img-id1" select="substring-after(@facs, '#')"/>
+                <a  class="hovertext2" data-hover="{substring-after(@n, '')}" href="{//surface[@xml:id = $img-id1]/graphic/@url}" target="_blank">|<xsl:apply-templates/></a>
+            </xsl:when>
+            
+            <xsl:when test="@type='inline'">
+                          <xsl:variable name="img-id1" select="substring-after(@facs, '#')"/>
+                <a class="hovertext-normal" href="{//surface[@xml:id = $img-id1]/graphic/@url}" target="_blank">[<xsl:value-of select="substring-after(@n, '')"/>]<xsl:apply-templates/></a>
+              </xsl:when>
+     
+            <!--se si desidera l'hover di qualcosa, basterà aggiungere la class="hovertext1" come sopra-->
+
+          </xsl:choose>
+    
+    </xsl:template>
+    
+    <!--  <btn class="hovertext">
+            <xsl:for-each select="substring-after(@n, '')">
+            <span class="first"><xsl:value-of select="substring-after(@n, '')"/><xsl:text>.</xsl:text></span></xsl:for-each>
+            <xsl:for-each select="substring-after(TEI//pb/@n, '')">
+            <span class="second">  <xsl:value-of select="substring-after(TEI//pb/@n, '')"/><xsl:text>.</xsl:text><xsl:apply-templates/>
+            </span> </xsl:for-each></btn> 
+    </xsl:template>
+    -->
+    
+    <script type="text/javascript">
+        function toggleContent() {
+        // Get the DOM reference
+        var contentId = document.getElementById("content");
+        // Toggle 
+        contentId.style.display == "block" ? contentId.style.display = "none" : 
+        contentId.style.display = "block"; 
+        }
+    </script>
+    
+<!--   Trying to get toogle switch between lb version and lg/l version of 
+        
+        
+        <xsl:template match="TEI//p">
+        <xsl:choose>
+            <xsl:when test="lb/@break='no'">
+                <xsl:text>-</xsl:text><br><xsl:apply-templates/></br>
+            </xsl:when>
+            <xsl:when test="lg">
+                <button onclick="toggleContent()">Toggle</button>
+                <p class="verse">
+                    <xsl:for-each select="l"> 
+                        <xsl:apply-templates/>   <br/></xsl:for-each> 
+                </p>
+            </xsl:when>
+            <xsl:otherwise>
+                <br><xsl:apply-templates/></br>
+            </xsl:otherwise>
+        </xsl:choose>
+        <btn class="linebeg">
+            <span >
+                <xsl:value-of select="substring-after(@n, '')"/><xsl:text>.</xsl:text></span>
+            <xsl:apply-templates/></btn> 
+    </xsl:template>
+    
+   -->
+   
+ <!-- <xsl:template match="lg">
+  <!-\-      <xsl:if test="@type">-\->
+   <xsl:choose> 
+       <xsl:when test="@met">
+           <p class="verse">
+            <xsl:value-of select="substring-after(@n, '')"/>
+     <xsl:apply-templates/> </p>
+       </xsl:when>    
+     <xsl:otherwise>
+          <p class="verse"><xsl:apply-templates/></p>
+      </xsl:otherwise>
+   </xsl:choose>
+    </xsl:template>
+   -->
+    <xsl:template match="orig">
+        <span>{<xsl:apply-templates/>}</span>
+    </xsl:template>
+    
+    <xsl:template match="lg">
+             <p class="verse"><xsl:apply-templates/></p>
+
+    </xsl:template>
+    
+<xsl:template match="lg/l">
+    <span><xsl:apply-templates/><br></br></span>
+</xsl:template>
+    
+    <xsl:template match="del">
+        <xsl:choose>
+            <xsl:when test="@hand">
+                                        [[<xsl:apply-templates/>]]
+            </xsl:when>
+            <xsl:otherwise>
+                <del class="del">[<xsl:apply-templates/>]</del>
+            </xsl:otherwise>
+        </xsl:choose>
+   </xsl:template>
+    
+  <xsl:template match="add">
+        <xsl:choose>
+            <xsl:when test="@place='above'">
+                <ins class="ins-sup"> <xsl:apply-templates/></ins>
+            </xsl:when>
+            <xsl:when test="@place='below'">
+                <ins class="ins-sub" ><xsl:apply-templates/></ins>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
+  <xsl:template match="hi">
+      <xsl:if test="@rend='grantha'">
+          <b><xsl:apply-templates/></b></xsl:if>
+</xsl:template>
+    
+  <!-- PROVA  <xsl:template match="TEI//expan">
+        <xsl:choose>
+            <xsl:when test="abbr">
+                <xsl:apply-templates/>
+            </xsl:when>
+            <xsl:when test="ex">
+                <span title="Hello world!"><xsl:apply-templates/></span>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>-->
+    
+   
+<!-- FUNCTIONING HOOVER PER <img>
+        <xsl:template match="TEI//abbr">
+                <!-\- <xsl:if test="@corresp"> BOh</xsl:if>-\->
+        <xsl:variable name="img-id" select="substring-after(@facs, '#')"/>
+      <xsl:variable name="glyph" select="substring-after(@corresp, '#')"/>
+        <xsl:choose>
+            <xsl:when test="@type='suffix'"> <!-\-da capire come fare cosa utile per i suffissi tipo kku etc, in questo "when you test type=suffix"-\->
+                <a href="#" class="five">⟨<xsl:apply-templates/>⟩<img src="{//surface[@xml:id = $img-id]/graphic/@url}"></img></a>
+            </xsl:when>
+                <xsl:otherwise>
+                    <span class="hovertext" data-hover="{//nym[@xml:id= $glyph]/form[contains(text(), '' )]}" ><xsl:apply-templates/></span></xsl:otherwise>
+        </xsl:choose>
+        </xsl:template>-->
+    
+    <!-- linking pdf through <a> and @href-->
+    
+    <xsl:template match="abbr">
+          <xsl:variable name="img-id" select="substring-after(@facs, '#')"/>
+        <!--     <xsl:variable name="glyph" select="substring-after(@corresp, '#')"/> -->
+        <xsl:choose>
+            <xsl:when  test="(@facs and @type='abbr')"> <!--da capire come fare cosa utile per i suffissi tipo kku etc, in questo "when you test type=suffix"-->
+                <a  class="five" href="{//surface[@xml:id = $img-id]/graphic/@url}" target="_blank"><xsl:apply-templates/></a>
+            </xsl:when>
+            <xsl:when  test="@facs"> <!--da capire come fare cosa utile per i suffissi tipo kku etc, in questo "when you test type=suffix"-->
+                <a  class="five" href="{//surface[@xml:id = $img-id]/graphic/@url}" target="_blank">⟨<xsl:apply-templates/>⟩</a>
+            </xsl:when>
+          <!--  <xsl:otherwise>
+                <span class="hovertext" data-hover="{//nym[@xml:id= $glyph]/form[contains(text(), '' )]}" ><xsl:apply-templates/></span></xsl:otherwise>-->
+        </xsl:choose> 
+    </xsl:template>
+    
+ <!--   <xsl:template match="seg">
+     <!-\-   <xsl:variable name="item" select="substring-after(@subtype, '')"/>-\->
+        <xsl:choose>
+            <xsl:when test="@type='title'">
+                <span class="seg1"></b>
+            </xsl:when>-->
+    <!--        <xsl:when test="(@type='word-ms') and (@subtype='(contains(text(),'')')">       
+                <span class="seg2"><xsl:apply-templates/></span>
+            </xsl:when>-->
+            
+        <!--</xsl:choose>
+    </xsl:template>-->
+    
+    <!--Milestones in hover / highlight-->
+    
+    <xsl:template match="seg">
+        <xsl:if test="@type"/>
+            <xsl:choose>
+                             <xsl:when test="(@type='wordMs') or (@subtype='wordMs')">
+                    <span class="milestone" data-hover="[copied item | word for manuscript]">   
+                        <xsl:apply-templates/></span>   
+                </xsl:when>
+                <xsl:when test="(@type='title') or (@subtype='title')">
+                    <span class="milestone" data-hover="[copied item | title]">   
+                        <xsl:apply-templates/></span>   
+                </xsl:when>
+                                      <xsl:when test="(@type='wordCh') or (@subtype='wordCh')">
+                    <span class="milestone" data-hover="[copied item | word for chapter]">   
+                        <xsl:apply-templates/></span>   
+                           </xsl:when>
+                <xsl:when test="@type='wordV'">
+                    <span class="milestone" data-hover="[copied item | word for verse]">   
+                        <xsl:apply-templates/></span>   
+                </xsl:when>
+                               <xsl:when test="@type='copItem'">
+                                   <span class="milestone" data-hover="[copied item]">   
+                                       <xsl:apply-templates/></span>   
+                                              </xsl:when>
+                <xsl:when test="@type='ownItem'">
+                    <span class="milestone" data-hover="[owned item]">   
+                        <xsl:apply-templates/></span>   </xsl:when>
+                <xsl:when test="@type='cop-ownItem'">
+                    <xsl:choose>
+                        <xsl:when test="@subtype='wordMs'">
+                            <span class="milestone" data-hover="[copied and owned item | word for manuscript]"><xsl:apply-templates/></span>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <span class="milestone" data-hover="[copied and owned item]"><xsl:apply-templates/></span>
+          
+                        </xsl:otherwise>
+                    </xsl:choose>
+                     
+                     
+                </xsl:when>
+                        <xsl:when test="(@type='pers') and (@subtype='scribe')">
+                    <span  class="milestone" data-hover="[scribe]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="(@type='pers') and (@subtype='own')">
+                    <span  class="milestone" data-hover="[owner]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="(@type='pers') and (@subtype='own-et-scribe')">
+                    <span  class="milestone" data-hover="[owner and scribe]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="(@type='pers') and (@subtype='own-vel-scribe')">
+                    <span  class="milestone" data-hover="[owner or scribe]"><xsl:apply-templates/></span>
+                </xsl:when>
+                    <xsl:when test="(@type='pers') and (@subtype='author')">
+                        <span  class="milestone" data-hover="[author]"><xsl:apply-templates/></span>
+                    </xsl:when>
+                
+    
+                <xsl:when test="@type='copFor-end'">
+                    <span class="milestone" data-hover="[end of copying formula]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="@type='copFor-beg'">
+                    <span class="milestone" data-hover="[beginning of copying formula]"><xsl:apply-templates/></span>
+                </xsl:when>
+             
+        <!--        <xsl:when test="@type='apo'">
+                    <span class="milestone" data-hover="[apology]"><xsl:apply-templates/></span>
+                </xsl:when>-->
+                
+                <xsl:when test="@type='apo'">
+                    <xsl:choose>
+                        <xsl:when test="@subtype='bless'">
+                                        <span class="milestone" data-hover="[apology | blessing]"><xsl:apply-templates/></span>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <span class="milestone" data-hover="[apology]"><xsl:apply-templates/></span>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:when>
+             
+                <xsl:when test="@type='date-jy'">
+                    <span class="milestone" data-hover="[date | Jovian year]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="@type='date-koy'">
+                    <span class="milestone" data-hover="[date | Kollam year]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="@type='date-kay'">
+                    <span class="milestone" data-hover="[date | Kali year]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="@type='date-chy'">
+                    <span class="milestone" data-hover="[date | Christian year]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="@type='date-śy'">
+                    <span class="milestone" data-hover="[date | Śaka year]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="@type='date-sm'">
+                    <span class="milestone" data-hover="[date | solar month]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="@type='date-lm'">
+                    <span class="milestone" data-hover="[date | lunar month]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="@type='date-md'">
+                    <span class="milestone" data-hover="[date | day of the month]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="@type='date-wd'">
+                    <span class="milestone" data-hover="[date | day of the week]"><xsl:apply-templates/></span>
+                </xsl:when>
+   
+                <xsl:when test="@type='date-p'">
+                    <span class="milestone" data-hover="[date | pakṣa]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="@type='date-t'">
+                    <span class="milestone" data-hover="[date | tithi]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="@type='date-n'">
+                    <span class="milestone" data-hover="[date | nakṣatra]"><xsl:apply-templates/></span>
+                </xsl:when>
+           <xsl:when test="@type='date-o'">
+            <xsl:choose>
+           
+                   <xsl:when test="(@type='date-o') and (@n='dayTime')">
+                       <span class="milestone" data-hover="[date | time of the day]"><xsl:apply-templates/></span>
+                   </xsl:when>
+                <xsl:when test="(@type='date-o') and (@n='hour')">
+                    <span class="milestone" data-hover="[date | hour of the time]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="(@type='date-o') and (@n='moon')">
+                    <span class="milestone" data-hover="[date | moon]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="(@type='date-o') and (@n='yoga')">
+                    <span class="milestone" data-hover="[date | yoga]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="(@type='date-o') and (@n='karana')">
+                    <span class="milestone" data-hover="[date | karana]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="(@type='date-o') and (@n='lagna')">
+                    <span class="milestone" data-hover="[date | lagna]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="(@type='date-o') and (@n='laksana')">
+                    <span class="milestone" data-hover="[date | lakṣana]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="(@type='date-o') and (@n='ayana')">
+                    <span class="milestone" data-hover="[date | ayana]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="(@type='date-o') and (@n='season')">
+                    <span class="milestone" data-hover="[date | sesaon]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="(@type='date-o') and (@n='mukurttam')">
+                    <span class="milestone" data-hover="[date | mukurttam]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="(@type='date-o') and (@n='velai')">
+                    <span class="milestone" data-hover="[date | velai]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:otherwise>
+                    <span class="milestone" data-hover="[date | other]"><xsl:apply-templates/></span>
+         
+                </xsl:otherwise>
+                   </xsl:choose>
+           </xsl:when>         
+                     <xsl:when test="@type='date-o'">
+                    <span class="milestone" data-hover="[date | other]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="@type='own'">
+                    <span class="milestone" data-hover="[owner]"><xsl:apply-templates/></span>
+                </xsl:when>
+                <xsl:when test="@type='inv'">
+                    <span class="milestone" data-hover="[// invocation]"><xsl:apply-templates/></span>
+                </xsl:when>
+               
+                
+                    </xsl:choose>
+        
+    </xsl:template>
+
+    
+    <xsl:template match="g">
+        <xsl:variable name="glyph" select="substring-after(@facs, '#')"/>
+        <xsl:choose>
+            <xsl:when  test="(@facs and @type='abbr')"> <!--da capire come fare cosa utile per i suffissi tipo kku etc, in questo "when you test type=suffix"-->
+                <a  class="five" href="{//surface[@xml:id = $glyph]/graphic/@url}" target="_blank"><xsl:apply-templates/></a>
+            </xsl:when>
+            <xsl:when  test="@facs"> <!--da capire come fare cosa utile per i suffissi tipo kku etc, in questo "when you test type=suffix"-->
+                <a  class="five" href="{//surface[@xml:id = $glyph]/graphic/@url}" target="_blank">⟨<xsl:apply-templates/>⟩</a>
+            </xsl:when>
+    <!--    <xsl:otherwise>
+            <span class="hovertext" data-hover="{//nym[@xml:id= $glyph]/form[contains(text(), '' )]}" ><xsl:apply-templates/></span></xsl:otherwise>-->
+            </xsl:choose>         
+    </xsl:template>
+    
+    <!-- The above template allows to dispaly as hover/passing the mouse on a specific word the expansion of the selected symbol;
+    the class and  the attribute data-hover in <span/> are defined, and can be modified, in the css; the value of data-hover implies that what
+    should be selected as an output for display is the text content of <form>, that is to be found in each <nym> [i.e. in a in-text list, not (for now) in a separate authority file]
+    -->
+           
+<!--    <xsl:template match="add">
+        <xsl:choose>
+            <xsl:when test="@place='above'">
+                <ins> <small><sup class="ins-sup"><xsl:apply-templates/></sup></small></ins>
+            </xsl:when>
+            <xsl:when test="@place='subscript'">
+                <ins class="ins-sub" ><xsl:apply-templates/></ins>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    -->
+
+  <xsl:template match="damage">
+         <xsl:choose>
+             <xsl:when test="supplied">
+                 <ins class="ins"><xsl:apply-templates/></ins>   
+             </xsl:when>
+             <xsl:otherwise>
+                 <ins class="ins">[<xsl:apply-templates/>]</ins>   
+             </xsl:otherwise>
+         </xsl:choose>
+                
+       
+    </xsl:template>
+    
+<!-- <xsl:template match="damage">
+        <xsl:choose>
+            <xsl:when test="supplied">
+                <ins class="ins">[<xsl:apply-templates/>]</ins></xsl:when>
+            <xsl:otherwise>[<xsl:apply-templa[[tes/>]</xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>-->
+    
+    <xsl:template match="choice">
+        <xsl:choose>
+            <xsl:when test="sic">
+      </xsl:when>
+           <xsl:when test="corr">
+                <p style="color:green" ><xsl:apply-templates/></p>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
+<!--    <xsl:template match="TEI//sic">
+        <ins class="ins">
+            <xsl:text>¿</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>?</xsl:text>
+        </ins>
+    </xsl:template>
+    
+    <xsl:template match="TEI//corr">
+        <span >
+            <ins class="ins">
+                     <xsl:text>{</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>}</xsl:text>
+            </ins>
+        </span>
+    </xsl:template>-->
+    
+<xsl:template match="TEI//supplied">
+ <xsl:choose>
+    <xsl:when test="@reason='omitted-in-original'">
+       <ins class="ins">
+                          <xsl:text>&lt;</xsl:text>
+                <xsl:apply-templates/>
+                <xsl:text>&gt;</xsl:text>
+        </ins>
+   </xsl:when>
+     <xsl:when test="@reason='illegible'">
+         <ins class="ins">†<xsl:apply-templates/>†</ins>      
+     </xsl:when>
+      <xsl:when test="@resp">
+          <ins class="ins">[<xsl:apply-templates/>]</ins>      
+      </xsl:when>
+          </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="surplus">
+        <xsl:choose>
+        <xsl:when test="@reason='repeated'">
+            <ins class="ins"> {<xsl:apply-templates/>}</ins>
+        </xsl:when>
+            
+        </xsl:choose>
+    </xsl:template>
+    
+    
+    <xsl:template match="ref">
+        <a href="{substring-after(@target, '')}" target="_blank"><xsl:apply-templates/></a>
+    </xsl:template>
+    
+    
+   <!-- <xsl:template match="orgName">
+        <xsl:if test="@ref">
+            <a href="{//listOrg/org/idno}"><xsl:value-of select="orgName"/><xsl:apply-templates/></a>
+        </xsl:if>
+        
+    </xsl:template>-->
+    
+  
+  
+    
+<xsl:template match="persName">
+   <xsl:if test="@role='father'">
+        <span class="hovertext-role1" data-hover="{@role, ''}">
+    <xsl:apply-templates/></span>
+   </xsl:if>
+    <xsl:if test="@role='scribe'">
+        <span class="hovertext-role2" data-hover="{@role, ''}">
+            <xsl:apply-templates/></span>
+    </xsl:if>
+    <xsl:if test="@role='owner'">
+        <span class="hovertext-role3" data-hover="{@role, ''}">
+            <xsl:apply-templates/></span>
+    </xsl:if>
+    <xsl:if test="@role='ownScr'">
+        <span class="hovertext-role4" data-hover="owner and scribe">
+            <xsl:apply-templates/></span>
+    </xsl:if>
+
+    <xsl:if test="@role='guru'">
+        <span class="hovertext-role4" data-hover="{@role, ''}">
+            <xsl:apply-templates/></span>
+    </xsl:if>
+    <xsl:if test="@role='grandFather'">
+        <span class="hovertext-role4" data-hover="grandfather">
+            <xsl:apply-templates/></span>
+    </xsl:if>
+    
+    
+       <!-- <span style="color:#D2691E"><xsl:apply-templates/></span>-->
+</xsl:template>
+    
+    <xsl:template match="placeName">
+        <xsl:choose>
+            <xsl:when test="@role='copPlace'">
+      
+            <span class="hovertext-role1" data-hover="place of copying">
+                <xsl:apply-templates/></span></xsl:when>
+    <xsl:otherwise>
+        <span>
+            <xsl:apply-templates/></span>
+    </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    
+   <!-- XSLT per rs: bisogna trovera un modo per renderlo utile!
+     
+       <xsl:template match="rs" >
+                <xsl:variable name="rs" select="substring-after(@ref, 'pers:')"/>
+        <a class="five" href="{../[@xml:id =  $rs]}"><xsl:apply-templates/>
+        </a>
+    </xsl:template>-->
+
+    <xsl:template match="rs" >
+        <xsl:choose>
+            <xsl:when test="@role">
+        <span class="hovertext-role3" data-hover="{@role, ''}">    <xsl:apply-templates/></span></xsl:when>
+           <xsl:otherwise>
+               <span><xsl:apply-templates/>
+               </span>
+           </xsl:otherwise>
+        </xsl:choose>
+   </xsl:template>
+  
+   
+   <xsl:template match="note">
+<p class="none"><xsl:apply-templates/></p>
+    </xsl:template>
+
+
+    <xsl:template match="list">
+        <p class="none"><xsl:apply-templates/></p>
+    </xsl:template>
+
+    
+   
+    
+    
+        
+
+    <!--   POSSIBILITY TO BE CHECKED FOR HOVER OF INFO FROM AUTHORITY FILE ON LISTPERS
+        
+        <xsl:variable name="persName" select="substring-after(@ref, 'pers:')"/>
+        <span class="hovertext" data-hover="{./listPerson/person[@xml:id= $persName]/persName/@role}">
+    <xsl:apply-templates/></span>-->
+    
+    
+<!--    POSSIBILITY FOR NOTE: not viable for nownotes that hover in the text.
+        
+        <xsl:template match="note">
+        <xsl:variable name="note-con" select="substring-after(@n, '')"/>
+        <sup class="hovertext" data-hover="{//note[@n= $note-con]}">
+       <xsl:value-of select="substring-after(@n, '')"/></sup>
+           <!-\- <span ><xsl:text>CIAO</xsl:text><xsl:apply-templates/></span>-\->
+         </xsl:template>-->
+    
+    
+  <!-- POSSIBILITIES FOR DATE: for the moment, I would suggest we do not use date to be displayed in the footer, as the
+      idea of using <anchor> as the marker for the modules is being developed. The information contained by date could
+      be displayed somewhere else/in some other way in the visualization.
+      
+      <xsl:template match="date">
+
+                      <span class="footer" > 
+                         
+                          <xsl:text>[date]</xsl:text>
+                          <xsl:apply-templates/>
+        </span>
+    </xsl:template>-->
+    
+    
+ <!--   Find how to concatenate all these sequences, so that not only the last command appears in the footer, but
+     all appear according to the order of apparition in the text-->
+     
+     
+         
+
+<!--    <xsl:template match="rs">
+        <xsl:choose>
+            <xsl:when test="@type='endFormula'">
+                <xsl:value-of select="name()"/>
+                <span class="footer">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            
+           <xsl:when test="@type='invocation'">
+           </xsl:when>
+            
+        </xsl:choose>
+    </xsl:template>-->
+        <!--da capire come fare cosa utile per i suffissi tipo kku etc, in questo "when you test type=suffix"
+                <a href="#" class="five"><xsl:apply-templates/><img src="{//surface[@xml:id = $img-id]/graphic/@url}"></img></a>
+            </xsl:when>
+            <xsl:otherwise>
+        
+        <img class="five" data-hover="{//note[contains(text(), '' )]}" ><sup><xsl:value-of select="substring-after(@n, '')"/><xsl:text>. </xsl:text></sup><xsl:apply-templates/></img> 
+   <xsl:value-of select="note[contains(text(), '' )]"/>
+ 
+ -->
+
+    
+<!--    SUPPOSEDLY TO REF ANOTHER XML FILE [ex. 353005b, note, in which 353005a is mentioned]
+    <xsl:template match="ref">
+        <!-\- <xsl:if test="@corresp"> BOh</xsl:if>-\->
+        <xsl:variable name="link" select="substring-after(@target, '#')"/>
+             
+        <a  class="five" href="{..//..//[@xml:id = $link]}" target="_blank"><xsl:apply-templates/></a>
+                    </xsl:template>
+   -->
+</xsl:transform>
 
