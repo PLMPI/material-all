@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+      <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+      <?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+      <?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="san-Latn">Viyāḻakkiḻamai Postakam</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Cambridge, UK</settlement>
+                  <repository>Cambridge University Library</repository>
+                  <idno>MS-OR-BOX Y Box Y item 3β</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="san-Latn">Viyāḻakkiḻamai
+                        Postakam</foreign>.</summary>
+               </msContents>
+               <physDesc>
+                  <p>The Jovian year Kīlaka corresponds to the Gregorian year 1848/1849, not 1847,
+                     thus either the former or the latter year is wrong; furthermore, the day of the
+                     week (Saturday) is wrong in either cases. If we regard the Gregorian year as
+                     valid, the date would be 25 November 1847, Thursday; on the other hand, if we
+                     rely on the Jovian year, the date is 24 November 1848, Friday. The latter
+                     hypothesis seems preferable, both because the day of the week is wrong by just
+                     one day, and because is seems more plausible that the scribe made a mistake
+                     concerning the Christian year than the Jovian year.</p>
+               </physDesc>
+            </msDesc>
+
+         </sourceDesc>
+
+      </fileDesc>
+      <encodingDesc>
+
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)" replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>persons</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="m">
+         <graphic url="../figures/symbols/m%C2%B0.pdf"/>
+      </surface>
+      <surface xml:id="d2">
+         <graphic url="../figures/symbols/d2.pdf"/>
+      </surface>
+      <surface xml:id="yj2">
+         <graphic url="../figures/symbols/yj2.pdf"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="prose" xml:lang="tam-Latn">
+            <head>Edition</head>
+            <ab>
+               <date type="single-match" when="1849-02-16">
+               <anchor type="date"/>
+               <lb type="inline" n="168v2" facs="to-be-filled"/>
+              <seg type="date-chy" subtype="v-mk-v">tēvacakāṟtam 1849</seg> i
+               cellum
+               <seg type="date-jy" subtype="v-mk">kīlakā <g facs="#yj2">YJ2</g></seg> 
+               <seg type="date-sm" subtype="v-mk">māci <abbr facs="#m" type="abbr">m°</abbr></seg> 
+               <seg type="date-md" subtype="v-mk"><num type="digit-o">7</num> <g facs="#d2">D2</g></seg> 
+               <seg type="date-wd" subtype="v-mk">veḷḷikkiḷamai</seg> 
+               <del hand="scribe">mikkel</del> <lb type="1" n="168v3"/> <del hand="scribe">….</del>t
+                  tēvālaiyattukku yinta <seg type="date-wd" subtype="v-mk">viyāḻakkiḻamai</seg></date>
+               <anchor type="item"/>
+               <seg type="copItem" subtype="wordMs">posttakam</seg> 
+               <anchor type="scribe"/>
+               <seg type="pers" subtype="scribe"><placeName>puḷiyāl</placeName> <persName ref="xxx" role="scribe">ñāṉappiṟakāca <lb type="1" n="168v4"/> ācāri</persName></seg>
+               <anchor type="copFor"/>
+               <seg type="copFor-end" subtype="eluti-muki">eḷuti mukintatu muṟṟu</seg></ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <ab>[In] the Jovian year Kīlaka, which occurs in the year of the epoch of god
+               (tēvacakāṟtam) 1849 of the English era, month of Māci, 7th day, Friday, Ñāṉappiṟakāca
+               Ācāri of Puḷiyāl finished writing the manuscript of the Thursday for the church of (?).</ab>
+         </div>
+         <div>
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

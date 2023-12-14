@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="san-Latn">Jaiminīya Dhāraṇalakṣaṇa</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Cambridge, UK</settlement>
+                  <repository>Cambridge University Library</repository>
+                  <idno>MS-OR-2365a</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="san-Latn">Jaiminīya
+                        Dhāraṇalakṣaṇa.</foreign></summary>
+               </msContents>
+               <physDesc>
+                  <p>(1) The spelling āï in Grantha script for Tamil āy is particularly unusual, cf.
+                     °y āï in [165r7]. (2) An alternative, possibly more common, reading of the
+                     verse (lines c and d) has nāthāya instead of nāthāyās. The former would then be
+                     an appellative of Rāma rather than Sītā. </p>
+               </physDesc>
+            </msDesc>
+
+         </sourceDesc>
+
+      </fileDesc>
+      <encodingDesc>
+
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)" replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>persons</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="m">
+         <graphic url="../figures/symbols/m%C2%B0.pdf"/>
+      </surface>
+      <surface xml:id="t">
+         <graphic url="../figures/symbols/t%C2%B0.pdf"/>
+      </surface>
+      <surface xml:id="yj1c">
+         <graphic url="../figures/symbols/yj1c.jpg"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="prose" xml:lang="tam-Latn">
+            <head>Edition</head>
+            <ab>
+               <lb type="inline" n="165r5"/>
+               <anchor type="date"/>
+               <date type="single-match" when="1737-11-02">
+                  <seg type="date-jy" subtype="v-mk"><hi rend="grantha">piṃgala</hi>
+                     <g facs="#yj1c">YJ1c</g></seg>
+                  <seg type="date-sm" subtype="v-mk">kāṟttika <hi rend="grantha">māsam</hi></seg>
+                  <seg type="date-md" subtype="v-mk"><num type="digit-o">2</num>
+                     <abbr facs="#t" type="abbr">t°</abbr></seg>
+                  <seg type="date-wd" subtype="v-mk"><hi rend="grantha">budha<lb type="2" n="165r6"
+                        />n</hi>kiḻamaiyum</seg>
+                  <seg type="date-t" subtype="v"><num type="word-o"><hi rend="grantha"
+                        >pañcami</hi>yum</num></seg>
+                  <seg type="date-n" subtype="v-mk" n=""><hi rend="grantha">puṣyanakṣatra</hi><del
+                        hand="#gici">..</del><hi rend="grantha">mum</hi></seg>
+                  <hi rend="grantha">inta divasatti</hi>le</date>
+               <hi rend="grantha">sakalaśāstranidhi<lb type="2" n="165r7"/>y āï sāmavedanidhiy āï
+                  sarvānantaguṇanidhiy aï mahābhāratarāmāyaṇā<lb type="2" n="165v16"
+                  />dyaṣṭadaśapurāṇārtthanirṇayavikhyātakīrttiy āï
+                     saccidānandamukundapādāravindase<lb type="2" n="165v2"/>vāratiy āï
+                  śiṣyānukaṃpiy āï irukku</hi>ṟa <hi rend="grantha">śrīmadveṃkaṭābhūśāstriya</hi>ḷu
+               uṭaya <hi rend="grantha">dās<lb type="2" n="165v3"/>ānudāsan āï dāsabhūtan āï
+                  tatpādāravindasevāratan āï irukku</hi>ṟa <anchor type="ownScribe"/>
+               <seg type="pers" subtype="ownScribe"><persName ref="xxx" role="ownScr">cā<lb type="2"
+                        n="165v4"/>mi</persName>yuṭaiya</seg>
+               <anchor type="item"/>
+               <seg type="copItem" subtype="title"><hi rend="grantha">sahitāraṇam
+                  dhāraṇam</hi></seg>
+               <anchor type="copFor"/>
+               <seg type="copFor-end" subtype="svahastalikh"><hi rend="grantha"
+                     >svahastalikhitam</hi></seg> &#3059; || </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p>On the day of the Jovian year Piṃgala, month of Kāṟttika, 2nd day, Wednesday, on the
+               fifth lunar day, and the constellation of Puṣya, the Dhāraṇam-cum-Āraṇam of Cāmi, who
+               is the servant of the servant, the servant-only, who enjoys serving the lotus-like
+               feet of the illustrious Veṃkaṭābhūśāstriyaḷu, who is a receptacle of all sciences,
+               the Sāmaveda, all auspicious qualities, the notorious embodiment of the explanation
+               of the meaning of the Mahābhārata, the Rāmāyaṇa, etc. the eighteen Purāṇas, who
+               enjoys serving the lotus-like feet of Mukunda who is being, consciousness, and bliss,
+               sympathetic towards his own students, was copied with his own hand. </p>
+         </div>
+         <div>
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="san-Latn">Padayojanā</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name> <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>           
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"></idno>  
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported Licence. To view a
+                     copy of the licence, visit https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, 444
+                     Castro Street, Suite 900, Mountain View, California, 94041, USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Cambridge, UK</settlement>
+                  <repository>Cambridge University Library</repository>
+                  <idno>MS-OR-2368</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="san-Latn">Padayojanā.</foreign></summary>
+               </msContents>
+               <!--    <physDesc>
+                  <p>Most probably, the syllable ve stands for Ve[kiṭīśvaravāddhyār], i.e. the name of Kṛṣṇavāddhyār’s father as indicated in MS-OR-OR2355g.
+                  </p>
+               </physDesc>-->
+            </msDesc>
+            
+         </sourceDesc>
+         
+      </fileDesc>
+      <encodingDesc>
+         
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC) under the
+               European Union’s Horizon 2020 research and innovation programme (grant agreement no 809994).</p>
+         </projectDesc>
+
+         <schemaRef type="guide" key="PLMPI_template"  url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)" replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                  <ref>persons</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="m">
+         <graphic url="../figures/symbols/m%C2%B0.pdf"/>
+      </surface>
+      <surface xml:id="d1">
+         <graphic url="../figures/symbols/d1.pdf"/>
+      </surface>
+      <surface xml:id="yj1b">
+         <graphic url="../figures/symbols/yj"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="verse"  xml:lang="tam-Latn">
+            <head>Edition</head>
+            <ab>
+               
+               
+               
+          <anchor type="apo"/>
+               <lg><l><seg type="apo"><lb type="inline" n="187r12"/><hi rend="grantha"> samālekhanaveḷāyāṃ yo doṣo jāyate bhramāt</hi></seg> |</l>
+                  <l><seg type="apo"><hi rend="grantha">taṃ kṣamantu budh<add place="below">ā</add>s sarve sphaṭikasvacchabuddhayaḥ</hi></seg> |</l></lg>
+            </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p><lg><l>May all wise people, whose intellect is clear like a crystal, forgive</l>
+             <l>that mistake, which is born from confusion at the time of writing.</l>
+             </lg>
+                         
+            </p>
+         </div>
+         <div>
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

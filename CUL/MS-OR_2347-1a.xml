@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="tam-Latn">Devīmāhātmya</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Cambridge, UK</settlement>
+                  <repository>Cambridge University Library</repository>
+                  <idno>MS-OR-2347-1a</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="tam-Latn"
+                     >Devīmāhātmya</foreign>.</summary>
+               </msContents>
+               <!--         <physDesc>
+                  <p></p>
+               </physDesc>-->
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)" replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>persons</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="DSC00609">
+         <graphic url="../figures/mss/SUB_353008/DSC00609.jpg" width="7952px" height="5304px"/>
+      </surface>
+
+      <surface xml:id="d1">
+         <graphic url="../figures/symbols/d1"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="prose" xml:lang="tam-Latn">
+            <head>Edition</head>
+            <ab>
+               <lb type="inline" n="77v2"/>
+               <anchor type="date"/>
+               <date type="cyclical"><note>Possible dates are <date when="1789-11-01">Nov 1,
+                        1789</date>, <date when="1849-11-02">Nov 2, 1849</date>, or <date
+                        when="1909-11-04">Nov 4, 1909</date>
+                  </note>
+                  <seg type="date-jy" subtype="v-e-mk"><hi rend="grantha">saumyanāmasa<supplied
+                           reason="omitted-in-original">ṃ</supplied>vatsaraṃ</hi></seg>
+                  <seg type="date-sm" subtype="v-mk"><hi rend="grantha">tulāmāsaṃ</hi></seg>
+                  <seg type="date-md" subtype="v-mk"><num type="digit-o">19</num>
+                     <g facs="#d1">D1</g></seg>
+                  <hi rend="grantha"><seg type="date-o" subtype="v">udiccu</seg></hi>
+                  <seg type="date-o" subtype="v-mk" n="nalikai"><num type="digit-o">13</num> ṉāḻikaiyāṟ</seg>
+                  <supplied reason="illegible">po</supplied>tu </date>
+               <anchor type="item"/><seg type="copItem" subtype="title"><hi rend="grantha"
+                     >devīmāhātmyaṃ</hi></seg>
+               <lb type="1" n="77v2"/>
+               <anchor type="copFor"/><seg type="copFor-end" subtype="samāpta"><hi rend="grantha"
+                     >samāptaṃ</hi></seg> &#xBF3; </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p>In the [Jovian] year Saumya, month of Tulā, 19th day, once [the sun] has risen
+               (udiccu), at the time of the 13th nāḻikai, the Devīmāhātmya was completed.</p>
+         </div>        
+         <div>
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      
+      </body>
+   </text>
+</TEI>
