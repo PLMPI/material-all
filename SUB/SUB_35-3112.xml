@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="san-Latn">Kālaprakāśika</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Hamburg, Germany</settlement>
+                  <repository>Staats- und Universitätsbibliothek (SUB), Hamburg Universität </repository>
+                  <idno>SUB 35.3112</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="san-Latn"
+                     >Kālaprakāśika.</foreign></summary>
+               </msContents>
+         
+            </msDesc>
+            <bibl>Cod. Palmbl. I 112 (II,7, entry 2940)</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+         <charDecl>
+            <glyph xml:id="YK1a">
+               <!-- <mapping type="html">&#2997;</mapping>-->
+               <figure>
+                  <graphic url="./Figures/fig1.jpg"/>
+               </figure>
+            </glyph>
+         </charDecl>
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)"
+               replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>placeNames</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="prose" xml:lang="tam-Latn">
+            <head>Edition</head>
+            <lb type="inline" n="101v4" facs="to-be-filled"/>
+            <ab> 
+               <anchor type="date"/>     
+               <date type="single-match" when="1802-07-21">
+                  <seg type="date-jy" subtype="v-e-mk">dundubhināmasaṃvatsare</seg> 
+                  <seg type="date-o" subtype="v-mk" n="ayana">dakṣiṇāyane</seg>
+                  <del><supplied resp="#gici">kru</supplied></del> 
+                  <seg type="date-o" subtype="v-mk" n="season">griṣṭmaṛtau</seg> 
+                  <seg type="date-sm" subtype="v-mk">āṣāḍamāse</seg> 
+                  <seg type="date-p" subtype="v-mk" n="fd">kṛṣṇapakṣe</seg> 
+                  <seg type="date-ld" subtype="v"><num type="word-o">saptamyāṃ</num></seg> 
+                  <seg type="date-wd" subtype="v-mk">saumyavāsare</seg>
+               <seg type="date-n" subtype="v-mk">revatinakṣatre</seg> <lb type="1" n="101v5"/> 
+                  <seg type="date-o" subtype="v-e-mk" n="yoga"> sukarmmanāmayoge</seg> 
+                  <seg type="date-o" subtype="v-mk" n="karana">bavakaraṇe</seg> asmin dine</date>
+               <anchor type="scribe"/>
+               <seg type="pers" subtype="scribe"><persName ref="pers:0000R" role="father">nemmili kāśyapagotraśeṣādriya</persName>putreṇa <persName ref="pers:0000X" role="scribe">tiruma<del quantity="1" unit="graph"
+               >.</del>lācālu</persName></seg> 
+               <anchor type="item"/>  
+               <seg type="copItem" subtype="title-item"><seg type="title">kālaprakāśikajyotiś</seg> <seg type="copItem" subtype="sastra">śāstram</seg></seg> &#x2740; <lb type="inline" n="101r1"
+                  facs="to-be-filled"/> &#x2740;<anchor type="copFor"/><seg type="copFor-end" subtype="svahastalikh"> svahastalikhitam</seg> &#xBF3;
+             </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p>In the year called Dundubhi, during the Southern course of the sun, in the Summer
+               season, month of Āṣāḍa, dark fortnight, seventh [lunar day], Wednesday, constellation
+               of Revati, yoga called Sukarmma, karaṇa of Bava – on that day, Tirumalācālu son of
+               Nemmili Śeṣādri of the Kāśyapa gotra copied with his own hand the treatise
+               Kālaprakāśikajyoti.</p>
+         </div>
+         <div >
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

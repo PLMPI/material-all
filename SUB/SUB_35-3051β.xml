@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="san-Latn">Śivagīta </foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Hamburg, Germany</settlement>
+                  <repository>Staats- und Universitätsbibliothek (SUB), Hamburg Universität </repository>
+                  <idno>SUB 35.3051β</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="san-Latn"
+                     >Śivagīta.</foreign></summary>
+               </msContents>
+               <physDesc>
+                  <p> The expression <foreign xml:lang="san-Latn">śivagītākhyagrandhaṃ</foreign>
+                     seems to show that the distinction between manuscript and text is not neatly
+                     cut in the tradition</p>
+               </physDesc>
+            </msDesc>
+            <bibl>
+               Cod. Palmbl. I 51 (see VOHD II,4, entry 1248)</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+         <charDecl>
+            <glyph xml:id="YK1a">
+               <!-- <mapping type="html">&#2997;</mapping>-->
+               <figure>
+                  <graphic url="./Figures/fig1.jpg"/>
+               </figure>
+            </glyph>
+         </charDecl>
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)"
+               replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>placeNames</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="DSC00899-3051">
+         <graphic url="../figures/mss/SUB_353051/DSC00899.jpg" width="7952px" height="5304px"/>
+      </surface>
+      <surface xml:id="d1">
+         <graphic url="../figures/symbols/d1.pdf"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="mix" xml:lang="mix-Latn">
+            <head>Edition</head>
+            
+            <ab>
+             
+                  <anchor type="apo"/>
+                  <lb  type="inline" n="41v4" facs="#DSC00899-3051"/>
+                  
+                 <seg type="apo"> 
+                     <lg>
+                        <l> <hi rend="grantha">yādṛśaṃ</hi> <del quantity="1" unit="graph">.</del>
+                           <hi rend="grantha">pustakaṃ dṛṣ</hi><supplied reason="omitted-in-original"><hi rend="grantha">ṭ</hi></supplied><hi rend="grantha">vā tādṛśaṃ likhitaṃ <lb type="1" n="41v5"/> mayā</hi> |</l>
+                        <l><hi rend="grantha">abaddhaṃ vā subaddhaṃ vā mama doṣo na vidyate</hi> &#xBF3;</l>
+                      </lg>
+                  </seg>
+                  <anchor type="inv"/>
+                     <seg type="inv">
+                        <lg>
+                        <l><hi rend="grantha">ānandamūlaguṇapallavatatvaśākhā</hi>-</l> 
+                           <l><hi rend="grantha">vedāntapuṣpaphalamokṣarasā<lb type="2" n="41v6"/>bhipūrṇaṃ</hi> | </l>
+                        <l><hi rend="grantha">cetovihaṃga śivatalpataruṃ vihāya</hi></l>
+                           <l><hi rend="grantha">saṃsāraśuṣkaviṭape kid idaṃ karoṣi</hi> &#xBF3;</l></lg></seg>
+               
+            
+              <anchor type="date"/>
+               <date type="cyclical"> 
+                  <seg type="date-jy" subtype="v-e-mk">
+                                       <hi rend="grantha">vikārināmasaṃvatsaraṃ</hi></seg>
+                  <seg type="date-sm" subtype="v-mk"> <hi rend="grantha">phālgunamāsaṃ</hi> <lb type="1" n="41v7"/></seg>
+                  <seg type="date-md" subtype="v-mk"><num type="digit-c">19</num> <g facs="#d1" >D1</g></seg>
+               </date>
+                  <anchor type="scribe"/>      
+            <seg type="pers" subtype="scribe">  <persName ref="pers:0000X" role="scribe">vayalakkāvūr <hi rend="grantha">e</hi>kā<supplied reason="omitted-in-original">m</supplied><hi rend="grantha">braṃ</hi></persName></seg>
+                 <anchor type="copFor"/>
+                <seg type="copFor-end" subtype="svahastalikh_skt"> <hi rend="grantha">svahastalikhitaṃ</hi> </seg>
+                 <anchor type="item"/>
+              <seg type="copItem" subtype="title-item">  
+                 <seg type="title" subtype="v-e"><hi rend="grantha">śivagītākhya</hi></seg>
+                 <seg type="wordMs" subtype="grantha"><hi rend="grantha">grandhaṃ</hi></seg></seg>
+                 <anchor type="copFor"/>
+                  <seg type="copFor-end" subtype="sampurna"> <hi rend="grantha">saṃpūrṇaṃ</hi> &#xBF3;</seg>
+      </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <ab>
+            <lg>
+               <l> As I saw the manuscript, thus I copied it, whether nonsensical or meaningful. No
+                  fault is mine. O bird-like mind, once you have left Śiva who is like a
+                  wish-fulfilling tree (read °kalpa° for °talpa°), whose roots are bliss, its
+                  sprouts are the qualities, its branches are the truth, its flowers and fruits are
+                  the Vedānta, its sap is liberation, what (read kim for kid) will you do in the
+                  withered bush of saṃsāra?</l>
+            </lg>
+         Year called Vikāri, month of Phālguna, 19th day, Vayalakkāvūr Ekāmbraṃ copied with
+               his own hand. The text (°grandhaṃ) called Śivagītā is completed. 
+            </ab>
+         </div>
+         <div >
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

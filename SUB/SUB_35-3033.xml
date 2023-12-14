@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="san-Latn">Rāmāyaṇasārasaṃkṣepa</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Hamburg, Germany</settlement>
+                  <repository>Staats- und Universitätsbibliothek (SUB), Hamburg Universität </repository>
+                  <idno>SUB 35.3033</idno>
+               </msIdentifier>
+               <msContents>                 
+                   <summary>Manuscript of the <foreign xml:lang="san-Latn">Rāmāyaṇasārasaṃkṣepa.</foreign></summary>
+               </msContents>               
+            
+            <physDesc>
+               <p>No day in the Gregorian calendar corresponds to the date in this colophon. Since the scribe is the same who wrote SUB 35-3028 (completed on 15 January 1803), we assume that the day of the week recorded in this date (Monday) is wrong: by correcting it into Sunday, the date corresponds to 19 December 1802, that is around one month before the date in SUB 35-3028. (2) In the translation we understand saṃpūrṇaṃ to be an independent sentence, but it is seems more plausible that the syntax of the whole sentence is incorrect, with a failed attempt at a passive construction. The combination of a Tamil instrumental and the verbal form eḻutiṉatu cannot in fact be found anywhere else.</p>
+            </physDesc>
+            </msDesc>
+            <bibl>Cod. Palmbl. I 33 (see II,5, entries 1559, 1595, 1596, 1597, 1598, 1926, 1932, 1938, 1993, 1994, 1995)
+            </bibl>
+         </sourceDesc>
+
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+         <charDecl>
+            <glyph xml:id="YK1a">
+               <!-- <mapping type="html">&#2997;</mapping>-->
+               <figure>
+                  <graphic url="./Figures/fig1.jpg"/>
+               </figure>
+            </glyph>
+         </charDecl>
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)"
+               replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>placeNames</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="fig1">
+         <graphic url="./Figures/fig1.jpg" width="1292px" height="272px"/>
+      </surface>
+      <surface xml:id="fig2">
+         <graphic url="./Figures/fig2.jpg" width="2267px" height="452px"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="mix" xml:lang="tam-Latn">
+            <head>Edition</head>
+            <ab>
+               <seg type="apo">
+             <lg type="anuṣṭubh" xml:lang="san-Latn">
+                <anchor type="apo"/>
+               
+               <l><lb type="1" n="34v7"/><hi rend="grantha"> aviraḷakṛtavarṇabhraṃśane pustake (‘)smi<damage extent="1" unit="character"><supplied resp="#gici">ṃ</supplied></damage> likhitam anavasāne lekharīdūṣaṇaṃ vā</hi> |</l>
+               <l> <hi rend="grantha"> viraḷam aviraḷaṃ vā yat kṛtau varṇarāśau karakṛta</hi><lb type="2" n="34v8"/><hi rend="grantha">m
+                  aparāthaṃ kṣantum arhanti santaḥ</hi> | </l>
+               <l> <hi rend="grantha">yad akṣarapadabhraṣṭam mātrahīnan tu yat bhav<damage extent="1" unit="character"><supplied resp="#gici">e</supplied></damage>t</hi> | </l>
+                <l> <hi rend="grantha">tat sarvaṃ kṣamyatā[n deva] nārāyaṇa namo</hi> (‘) <hi rend="grantha">stu te</hi> |</l>
+               <l> <hi rend="grantha">visargabindum<damage extent="4" unit="character"><supplied resp="#gici">ātre</supplied></damage> ṇa padapādākṣarāṇi ca</hi> |</l>
+               <l> <hi rend="grantha">nyūnāni<damage extent="1" unit="character"><supplied resp="#gici">ś</supplied></damage> cātiriktāni kṣa</hi><lb type="2" n="34v9"/><hi rend="grantha">masva puruṣottama</hi> | &#xBF3;</l>
+            </lg></seg>
+               
+               <anchor type="date"/>    
+               <date type="single-match" when="1803-01-15">
+                  <hi rend="grantha"><seg type="date-jy" subtype="v-mk">dundubhivarṣaṃ</seg> 
+                     <seg type="date-sm" subtype="v-mk">dhanurmmāsaṃ</seg></hi> 
+                  <seg type="date-t" subtype="v-mk"><num type="digit-o">7</num> <hi rend="grantha">teti</hi></seg> 
+                  <seg type="date-wd" subtype="v-mk">tiṅkaḷkkiḻamai</seg> 
+                  inta <hi rend="grantha">śubhadina</hi>ttil</date> 
+               <anchor type="scribe"/>  
+               <seg type="pers" subtype="scribe"><persName ref="pers:PSN00006" role="scribe">kiṭāmpi <hi rend="grantha">śrīkṛṣṇadāsa</hi>ṉāle</persName></seg> 
+               <anchor type="copFor"/> <seg type="copFor-end" subtype="eluti">e<damage extent="2" unit="character"><supplied resp="#gici">ḻu</supplied></damage>tiṉatu</seg> 
+               <hi rend="grantha"> <anchor type="item"/> <seg type="item" subtype="title">śrīrāmāyaṇasārasaṃkṣepaṃ</seg> <anchor type="copFor"/> <seg type="copFor-end" subtype="sampurna">saṃpūrṇaṃ</seg></hi> |
+   
+            </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            
+               <lg><l>The loss of letters that was made dense in this manuscript, or a slip of the pencil written in the unceasing [writing].</l>
+              <l> May the good ones forgive the mistake made by the hand concerning the heap of letters that is made (kṛtau > kṛte ?) either loose or dense.</l>
+               <l>What is a dropped character (akṣara) or word, as well as the deficiency of a mora, may all that be forgiven, o god Nārāyaṇa, honour to you.</l>
+               <l>Words, lines, syllables with visargas, nasal signs, morae:  may the Supreme Being forgive whether there are too few or too many.</l></lg>
+            
+            <p>Year Dundubhi, month of Dhanur, 7th day, Monday: in this auspicious day the illustrious Rāmāyaṇasārasaṃkṣepa was copied (eḻutiṉatu [sic!]) by Kiṭāmpi Śrīkṛṣṇadāsaṉ; it is completed.</p> 
+         </div>
+         <div >
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+    
+   </text>
+</TEI>

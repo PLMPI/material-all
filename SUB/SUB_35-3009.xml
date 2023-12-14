@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="san-Latn">Taittirīyabrāhmaṇa</foreign>, guardleaf
+           </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name> <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>           
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+               <idno type="filename"></idno>  
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported Licence. To view a
+                     copy of the licence, visit https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, 444
+                     Castro Street, Suite 900, Mountain View, California, 94041, USA.</p>
+         <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+        <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+ <msDesc>
+    <msIdentifier>
+       <settlement>Hamburg, Germany</settlement>
+       <repository>Staats- und Universitätsbibliothek (SUB), Hamburg Universität </repository>
+       <idno>SUB 35.3009</idno>
+    </msIdentifier>
+    <msContents>
+       <summary>Manuscript of the <foreign xml:lang="san-Latn">Taittirīyabrāhmaṇa.</foreign></summary>
+    </msContents>
+    <physDesc><p>(1) The catalogue wrongly reads pālūru mutsāmikurukkaḷ as pālū rāmasvāmikurukkaḷ.  (VOHD II, 7, entry 2275). (2) Pālūru could correspond to Palur, a village in Kanchipuram district (https://en.wikipedia.org/wiki/Palur). (3) Possibly, Mutsāmikurukkaḷ could be read as (an abbreviation of?) Muttusāmikurukkaḷ.</p> 
+    </physDesc>
+ </msDesc>
+            <bibl>Cod. Palmbl. I 9 (see VOHD II, 7, entry 2275)</bibl>
+            
+         </sourceDesc>
+      </fileDesc>
+     <encodingDesc>
+        <projectDesc>
+      <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+       <p>The project DHARMA has received funding from the European Research Council (ERC) under the
+              European Union’s Horizon 2020 research and innovation programme (grant agreement no 809994).</p>
+        </projectDesc>
+        <charDecl>
+           <glyph xml:id="YK1a">
+             <!-- <mapping type="html">&#2997;</mapping>-->
+              <figure>
+                 <graphic url="./Figures/fig1.jpg"/>
+              </figure>
+           </glyph>
+        </charDecl>
+        <schemaRef type="guide" key="PLMPI_template"  url="to_be_filled_in_later"/>
+ <!-- UPDATE the link once the release is made official -->
+        <listPrefixDef>
+           <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+           <prefixDef ident="pers" matchPattern="([a-zA-Z]+)" replacementPattern="persons.xml#$1">
+              <p>Internal URIs using the part prefix to point to person elements in the
+                 <ref>person</ref> file.</p>
+           </prefixDef>
+        </listPrefixDef>
+     </encodingDesc>
+  </teiHeader>
+   <facsimile>
+      <surface xml:id="DSC00710">
+         <graphic url="../figures/mss/SUB_353009/DSC00710.jpg" width="7952px" height="5304px"/>
+              </surface>
+   </facsimile>
+  <text>
+      <body>
+         <div type="ownStmt" subtype="prose" xml:lang="tam-Latn">
+            <head>Edition</head>
+            <ab>
+           <lb type="inline" n="GL_1" facs="#DSC00710"/>
+               <anchor type="own"/>
+               <seg type="pers" subtype="own"><rs ref="pers:PSN00003" role="father">pālūru mutsāmikurukkaḷ kumāran</rs>
+                  <persName ref="pers:PSN00002" role="owner">su<supplied reason="illegible" resp="pers:gici">pi</supplied>ramaṇiyan</persName></seg>
+              <anchor type="item"/>
+               mūṇā <seg type="item" subtype="wordCh">aṣṭakaṃ</seg> 
+               &#xBF3;
+            </ab>
+           </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p>The third Aṣṭaka of Supiramaṇiyan, son of Pālūru Mutsāmikurukkaḷ.</p>
+         </div>
+         <div >
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="san-Latn">Jātakālaṃkāra</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Hamburg, Germany</settlement>
+                  <repository>Staats- und Universitätsbibliothek (SUB), Hamburg Universität </repository>
+                  <idno>SUB 35.3110</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="san-Latn"
+                     >Jātakālaṃkāra.</foreign></summary>
+               </msContents>
+            </msDesc>
+            <bibl>alias Cod. Palmbl. I 110 (see II,5, entries 1861, 1862, 1863, 1864, 1866, 1867,
+               1868, 1869, 1871, 1872, 1873, 1874)</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+         <charDecl>
+            <glyph xml:id="YK1a">
+               <!-- <mapping type="html">&#2997;</mapping>-->
+               <figure>
+                  <graphic url="./Figures/fig1.jpg"/>
+               </figure>
+            </glyph>
+         </charDecl>
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)"
+               replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>placeNames</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="DSC00366-3110">
+         <graphic url="../figures/mss/SUB_353110/DSC00366.jpg" width="7952px" height="5304px"/>
+      </surface>
+      <surface xml:id="d1">
+         <graphic url="../figures/symbols/d1.pdf"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="prose" xml:lang="mix-Latn">
+            <head>Edition</head>
+
+            <ab>
+               <lb type="inline" n="73r5" facs="#DSC00366-3110"/>
+               <anchor type="date"/>
+               <date type="single-match" when="1835-03-10">
+                  <seg type="date-jy" subtype="v-e-mk">
+                     <hi rend="grantha">jayanāmasaṃvatsaraṃ</hi></seg>
+                  <seg type="date-sm" subtype="v-e"><hi rend="grantha">māśimāsam</hi></seg>
+                  <seg type="date-md" subtype="v-mk"><num type="digit-c"><hi rend="grantha"
+                        >28</hi></num>
+                     <g facs="#d1">D1</g></seg>
+                  <seg type="date-wd" subtype="v-mk">
+                     <hi rend="grantha">bhaumavāramuṃ</hi></seg>
+                  <seg type="date-t" subtype="v"><num type="word-o"><hi rend="grantha"
+                           >daśamiyaṃ</hi></num></seg>
+                  <seg type="date-n" subtype="v-mk" n="fd">
+                     <hi rend="grantha">puna</hi><lb type="2" n="73r6"/><hi rend="grantha">rva</hi>
+                     <supplied reason="omitted-in-original"><hi rend="grantha">su</hi></supplied><hi
+                        rend="grantha">nakṣatramuṃ</hi></seg>
+                  <seg type="date-o" subtype="v-s-mk" n="yoga"><hi rend="grantha">
+                        śobhananāmayogamum</hi></seg>
+                  <seg type="date-o" subtype="v-mk" n="karana"><hi rend="grantha"> garakaraṇamum</hi></seg>
+                  <seg type="date-o" subtype="v-mk" n="lagna"><hi rend="grantha"
+                        >vṛṣabhalagnamuṃ</hi></seg> kūḍina <hi rend="grantha">śubhadina</hi>ttil - </date>
+               <anchor type="scribe"/>
+               <seg type="pers" subtype="scribe">
+                  <rs ref="pers:0000X">
+                     <persName ref="pers:0000X" role="father">ampainakar vaikānasaṃ
+                        keśavaiyaṅkār</persName> putran </rs>
+                  <persName ref="pers:0000" role="scribe">śrīraṃgācālu</persName></seg>
+               <anchor type="copFor"/>
+               <seg type="copFor-end" subtype="eḻutu"> yeḻutuki<lb type="2" n="73r7"/>ṉṟatu</seg>-
+                  <hi rend="grantha">iti </hi>
+               <anchor type="item"/>
+               <seg type="copItem" subtype="title"><hi rend="grantha">jātakālaṃkāraṃ</hi></seg>
+               <anchor type="copFor"/>
+               <seg type="copFor-end" subtype="samāpta_skt"><hi rend="grantha">samāptaḥ</hi></seg> &#xBF3; </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p>In the auspicious day in which the year called Jaya, the month of Māśi, 28th day,
+               Tuesday, the tenth [lunar day], the constellation of Punarvasu, the yoga called
+               Śobha, the <foreign xml:lang="san-Latn">karaṇa</foreign> of Gara, the lagna of
+               Vṛṣabha fall together, Śrīraṃgācālu son of Ampainakar Vaikānasaṃ Keśavaiyaṅkār
+               copied. So the Jātakālaṃkāra is completed. </p>
+
+         </div>
+         <div >
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

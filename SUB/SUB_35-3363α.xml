@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="san-Latn">Nālāyiraprabandha</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Hamburg, Germany</settlement>
+                  <repository>Staats- und Universitätsbibliothek (SUB), Hamburg Universität </repository>
+                  <idno>SUB 35.3363α</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="san-Latn"
+                        >Nālāyiraprabandha.</foreign></summary>
+               </msContents>
+               <physDesc>
+                  <p> (1) tiruṉārāyaṇapurattile should correspond to Thirunarayanapuram in Tamil
+                     Nadu (and should not correspond to the homonymous alternative name of Melkote
+                     in Kerala)
+                     (https://www.google.com/maps/place/Thirunarayanapuram,+Tamil+Nadu+621203,+India/@10.9931443,78.2142989,11.12z/data=!4m5!3m4!1s0x3baa4848ff143e7b:0xca9aee799b0ef50!8m2!3d10.9709713!4d78.32021).
+                     (2) Note the peculiar way in which rṇa in paurṇamiyil [16v1]. (3) The date is
+                     indeterminable because several days in the Gregorian calendar fit in: 6 March
+                     1623, 2 March 1683 (next-day tithi and nakṣatra), 3 April 1863 (next-day tithi)
+                     and, accepting small inaccuracies, also 27 February (it was the last day of the
+                     month of Māci, thus not Paṅkuṉi yet) and 27 March 1743 (tithi and nakṣatra do
+                     not overlap for a few hours). </p>
+               </physDesc>
+            </msDesc>
+            <bibl>Cod. Palmbl. III 118 (see VOHD II,4, entries 1484, 1485)</bibl>
+
+         </sourceDesc>
+
+      </fileDesc>
+      <encodingDesc>
+
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+         <charDecl>
+            <glyph xml:id="YK1a">
+               <!-- <mapping type="html">&#2997;</mapping>-->
+               <figure>
+                  <graphic url="./Figures/fig1.jpg"/>
+               </figure>
+            </glyph>
+         </charDecl>
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)"
+               replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>placeNames</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="prose" xml:lang="tam-Latn">
+            <head>Edition</head>
+
+            <ab>
+               <lb type="inline" n="16v1" facs="to-be-filled"/>
+               <anchor type="date"/>
+               <date type="multiple-match"><del><supplied resp="#mafr"><hi
+                     rend="grantha">rudhirodgarī</hi></supplied></del><hi rend="grantha"
+                        ><seg type="date-jy" subtype="v-mk">dundubhivarṣaṃ</seg></hi> 
+               <seg type="date-sm" subtype="v">paṅkuṉiy</seg> 
+               <seg type="date-n" subtype="v">utta<hi rend="grantha">raṃ</hi></seg> 
+                  <seg type="date-t" subtype="v" ><hi rend="grantha">paurṇami</hi>yil</seg></date>
+             <anchor type="copFor"/>  <seg>eḻutinatu</seg> 
+               <anchor type="copPlace"/><placeName ref="palce:0000X" role="copPlace">tiruṉārāyaṇapurattile</placeName>
+            </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <ab>In the year Dundubhi, [month of] Paṅkuṉi, [under the constellation of] Uttaram, day
+               of Full Moon, [the manuscript] was copied in <foreign xml:lang="san-Latn"
+                  >Tiruṉārāyaṇapuram</foreign>.</ab>
+         </div>
+         <div >
+            <head>Modular Syntax</head>
+            <anchor type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

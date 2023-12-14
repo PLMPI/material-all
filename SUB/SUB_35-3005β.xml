@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<!--<?xml-model href="https://raw.githubusercontent.com/erc-dharma/project-documentation/master/schema/latest/DHARMA_CritEdSchema.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/erc-dharma/project-documentation/master/schema/latest/DHARMA_CritEdSchema.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>-->
+<!--<?xml-model href="./PLMPI_v01.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="san-Latn">Taittirīya­samhitā</foreign>
+            </title>
+            <author ref="part:gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author ref="part:mafr">
+               <name>Marco</name> <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>           
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename">SUB_35-3005β</idno>  
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported Licence. To view a
+                     copy of the licence, visit https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, 444
+                     Castro Street, Suite 900, Mountain View, California, 94041, USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Hamburg, Germany</settlement>
+                  <repository>Staats- und Universitätsbibliothek (SUB), Hamburg Universität </repository>
+                  <idno>SUB 35.3005β</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="san-Latn">Taittirīya­samhitā</foreign>, <foreign xml:lang="san-Latn">kāṇḍa</foreign> 4 (<foreign xml:lang="san-Latn">padapāṭha</foreign>).</summary>
+               </msContents>
+            
+            <physDesc>
+               <p>If we accept the conversion of SUB 35.3005α (see the relevant note) and if the Jovian year mentioned in the two colophons is the same, then this date would correspond to 22 January 1577.</p>
+            </physDesc>
+            </msDesc>        
+         </sourceDesc>
+      </fileDesc>
+ 
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC) under the
+               European Union’s Horizon 2020 research and innovation programme (grant agreement no 809994).</p>
+         </projectDesc>
+         <!--        <charDecl>
+         <glyph xml:id="YK1a">
+               <!-\- <mapping type="html">&#2997;</mapping>-\->
+               <figure>
+                  <graphic url="./Figures/fig1.jpg"/>
+               </figure>
+            </glyph>
+         </charDecl>-->
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)" replacementPattern="idPart.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                  <ref>placeNames</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="SUB_353005b" >
+             <graphic url="../figures/mss/SUB_353005/DSC00007.jpg" width="7952px" height="5304px"/> 
+             <note>The guardleaf folio is broken on the left side. </note><!--written only as an example, to be modified-->
+      </surface>
+      <surface xml:id="m" >
+         <graphic url="../figures/symbols/m%C2%B0.pdf" /> 
+      </surface>
+      <surface xml:id="yj1a">        
+         <graphic url="../figures/symbols/yj1a.pdf"></graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt"  subtype="prose" xml:lang="tam-Latn">
+            <head>Edition</head>
+            <ab>
+               <lb type="inline" n="GL_1"  facs="#SUB_353005b"/>  
+               <anchor type="date"/>
+               <date type="cyclical" when="1577-02-22" resp="pers:mafr" >
+       
+                <seg type="date-jy" subtype="v-mk"> dhātu <g facs="#yj1a">YJ1a</g></seg>
+                 <seg type="date-sm" subtype="v-mk"> tai <abbr facs="#m" type="abbr">m°</abbr></seg>
+                  <seg type="date-md" subtype="v"><num type="digit-o">26</num></seg>
+               </date>
+                <anchor type="copFor"/>
+         
+              <seg type="copFor-end" subtype="mukivu">mukivu</seg> |
+            </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p>Completion in the Jovian year Dhātu, month of Tai, 26th day.</p>
+         </div>
+         <div >
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

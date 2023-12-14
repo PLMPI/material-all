@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="san-Latn">Prathamopakarmaśānti</foreign> and other
+               manuscripts on <foreign xml:lang="san-latn">dharma</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Hamburg, Germany</settlement>
+                  <repository>Staats- und Universitätsbibliothek (SUB), Hamburg Universität </repository>
+                  <idno>SUB 35.3188</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="san-Latn">Prayogadarpaṇa</foreign>
+                     and other texts on <foreign xml:lang="san-Latn">dharma</foreign>.</summary>
+               </msContents>
+               <physDesc><p>This is so far the only attestation of a finite form of the root muḻu- used to indicate completion. (2) The expression yitu ariñcu anugrahikka vēṇṭiyatu seems to be a request of the scribe for a positive attitude towards himself. (3) In the date, vyā. is probably an abbreviation for viyāḻakkiḻamai, “Thursday” (which fits in with the other calendrical elements).</p></physDesc>
+               
+            </msDesc>
+            <bibl>alias Cod. Palmbl. I 188 (II,6, entries 2025, 2129, 2138, 2139)</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+         <charDecl>
+            <glyph xml:id="YK1a">
+               <!-- <mapping type="html">&#2997;</mapping>-->
+               <figure>
+                  <graphic url="./Figures/fig1.jpg"/>
+               </figure>
+            </glyph>
+         </charDecl>
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)"
+               replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>placeNames</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="m">
+         <graphic url="../figures/symbols/m%C2%B0.pdf"/>
+      </surface>
+      <surface xml:id="d1">
+         <graphic url="../figures/symbols/d1.pdf"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="ownStmt" subtype="prose" xml:lang="san-Latn">
+            <head>Edition</head>
+            
+            <ab>
+               <lb type="inline" n="55v5" facs="to-be-filled"/>
+               <anchor type="date"/>
+               <date type="single-match" when="1859-09-22">
+                  <seg type="date-jy" subtype="v-e-mk"><hi rend="grantha">siddhārtthināmasaṃvatsara</hi>ṃ</seg> 
+                  <seg type="date-sm" subtype="v-mk">puṟaṭṭāci <abbr facs="#m" type="abbr">m°</abbr></seg> <lb type="1" n="55v6"/> 
+                  <seg type="date-md" subtype="v-mk"><num type="digit-o">8</num> <g facs="#d1">D1</g></seg>
+                  <hi rend="grantha"><seg type="date-wd" subtype="v">vyā.</seg></hi>
+                     <seg type="date-ld" subtype="v"><hi rend="grantha">ekādaśi</hi></seg> 
+                  <seg type="date-o" subtype="v" n="hour"><num type="digit-o">55</num></seg>
+                  - <seg type="date-o" subtype="pusya"><hi rend="grantha">puṣyaṃ</hi></seg> 
+                  <seg type="date-o" subtype="hour"><num type="digit-o">56</num></seg> | 
+                  
+               yinta ś<hi rend="grantha">ubhadina</hi>ttil</date>
+               <anchor type="item"/>
+               <seg type="copItem" subtype="title"><hi rend="grantha">prayogadarpaṇaṃ</hi></seg>
+               
+               <anchor type="ownScribe"/>
+               <seg type="pers" subtype="ownScribe">
+                  <persName ref="pers:PSN00015" role="ownScr">tūppil <hi rend="grantha">rāghavadāsa</hi>ṉ</persName>āle</seg>
+               
+               <anchor type="copFor"/>
+               <seg type="copFor-end" subtype="mulu">muḻuñcutu</seg>
+               <anchor type="appr"/>
+               <lb type="1" n="55v7"/> yitu ariñcu <hi rend="grantha">anugra</hi>hikka vēṇṭiyatu &#xBF3; </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p>On this auspicious day of the year called Siddhārtthin, month of Puṟaṭṭāci, 8th day,
+               Thursday, the eleventh [lunar day that ends at the] 55th [hour], [constellation of]
+               Puṣyaṃ [that ends at the] 56th [hour], Tūppil Rāghavadāsaṉ completed the
+               Prayogadarpaṇam. Knowing this, one should be favourable.</p>
+         </div>
+         <div >
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

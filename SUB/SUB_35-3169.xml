@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="san-Latn">Mumukṣuppaṭi</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Hamburg, Germany</settlement>
+                  <repository>Staats- und Universitätsbibliothek (SUB), Hamburg Universität </repository>
+                  <idno>SUB 35.3169</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="san-Latn"
+                     >Mumukṣuppaṭi.</foreign></summary>
+               </msContents>
+               <physDesc><p>(1) something about aṟaiyar “priest”. (2) About the name comāciyāṇṭāṉ, see google "சோமாசி ஆண்டான்" (சோமாசி = cōmayāji).s</p></physDesc>
+            </msDesc>
+            <bibl>alias Cod. Palmbl. I 169 (see VOHD II,5, entry 1934)</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+         <charDecl>
+            <glyph xml:id="YK1a">
+               <!-- <mapping type="html">&#2997;</mapping>-->
+               <figure>
+                  <graphic url="./Figures/fig1.jpg"/>
+               </figure>
+            </glyph>
+         </charDecl>
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)"
+               replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>persons</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="prose" xml:lang="tam-Latn">
+            <head>Edition</head>
+           
+            <ab>
+               <anchor type="date"/>
+               <lb type="inline" n="98r5" facs="to-be-filled"/>
+               <date type="single-match" when="1790-10-22">
+                  <seg type="date-jy" subtype="v">cātāraṇāṇṭ(')</seg>
+               <seg type="date-sm" subtype="v">arpici</seg> 
+               <seg type="date-t" subtype="v-mk">murppakkam tetiy</seg>
+               <seg type="date-md" subtype="v"><num type="word-o">ompatu</num></seg> 
+               <seg type="date-wd" subtype="v-mk">veḷḷikkaḻamaiy</seg> aṉṟu yinta</date>
+                  <del quantity="1" unit="graph">.</del>
+               
+               <anchor type="item"/>
+               <seg type="copItem" subtype="title-title-item"><seg type="title"><hi rend="grantha">svarūpopāyapuruṣārttham</hi></seg> āṉa <hi rend="grantha"
+                  ><seg type="title">tirumantrārttha</seg><seg type="wordMs">śrīkośattai</seg></hi></seg> 
+               <anchor type="scribe"/> 
+               <seg type="pers" subtype="scribe">comāciyāṇṭ<lb type="2" n="98r6"/>āṉ <hi
+                  rend="grantha">vaṃśa</hi>m āṉa <placeName ref="place:0000X">tiruṉārāyaṇapuratt</placeName>(') aṟaiyar <persName ref="pers:0000X" role="scribe">ciṅkarācāriyar</persName></seg>
+               
+               <anchor type="copFor"/>
+               <seg type="copFor-end" subtype="eluti-muki">eḻunt(') aruḷappaṇṇi mukiñcitu</seg> ||</ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p>On the day of the year Cātāraṇam, [month of] Arpici, bright fortnight, day nine,
+               Friday, Ciṅkarācāriyar, priest (aṟaiyar) of Tiruṉārāyaṇapuram, who is in the lineage
+               of Comāciyāṇṭāṉ, finished copying this manuscript of the Tirumantrārttham, which is
+               the Svarūpopāyapuruṣārttham.</p>
+         </div>
+         <div >
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

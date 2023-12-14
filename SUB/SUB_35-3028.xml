@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of the <foreign xml:lang="san-Latn">Hastigirimāhātmya</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename">SUB_35-3028</idno>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Hamburg, Germany</settlement>
+                  <repository>Staats- und Universitätsbibliothek (SUB), Hamburg Universität </repository>
+                  <idno>SUB 35.3028</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="san-Latn"
+                        >Hastigirimāhātmya.</foreign></summary>
+               </msContents>
+            </msDesc>
+            <bibl>Cod. Palmbl. I 28 (see VOHD II,4, entries 1237, 1350)</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+         <charDecl>
+            <glyph xml:id="YK1a">
+               <!-- <mapping type="html">&#2997;</mapping>-->
+               <figure>
+                  <graphic url="./Figures/fig1.jpg"/>
+               </figure>
+            </glyph>
+         </charDecl>
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)"
+               replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>placeNames</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="DSC01236-3028">
+         <graphic url="../figures/mss/SUB_353028/DSC01236.jpg" width="1292px" height="272px"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="edition" subtype="scribesStmt" xml:lang="tam-Latn">
+            <head>Edition</head>
+            <ab>
+               
+               <anchor type="date"/>
+               <lb type="inline" n="117r8" facs="#DSC01236-3028"/>
+               <date type="single-match" when="1803-01-15">
+                  <seg type="date-jy" subtype="v-mk"><hi rend="grantha"> dundubhivarṣaṃ</hi></seg>
+                  <seg type="date-sm" subtype="v-mk"><hi rend="grantha">taimāsaṃ</hi></seg>
+                  <seg type="date-md" subtype="v-mk"><num type="word-o">ṉālā<lb type="2" n="118v1" facs="#DSC01236-3028"
+                           /><hi rend="grantha">n</hi></num><hi rend="grantha"> teti</hi></seg>
+                  <seg type="date-wd" subtype="v-mk"><hi rend="grantha">śa</hi><damage extent="4"
+                        unit="character"><supplied resp="#mafr"><hi rend="grantha"
+                           >niki</hi></supplied></damage>ḻamai</seg>
+                  <seg type="date-n" subtype="v-mk" n="fd"><hi rend="grantha">ci</hi>tt<supplied
+                        reason="omitted-in-original">r</supplied>ā<hi rend="grantha"
+                     >nakṣatraṃ</hi></seg> inta <hi rend="grantha">śubhadina</hi>ttil 
+               </date>
+               
+               
+               <anchor type="scribe"/>
+               <anchor type="copFor"/>
+               <anchor type="item"/>
+               <anchor type="copFor"/>
+               
+               <seg type="pers" subtype="scribe">
+                  <persName ref="pers:PSN00006" role="scribe">
+                      kiṭāmpi <hi rend="grantha">kṛṣṇamācāluvāsale</hi></persName></seg>
+               
+               
+               <seg type="copFor-end" subtype="eḻutiṉa">eḻutiṉa</seg>
+               <hi rend="grantha">
+                  <seg type="copItem" subtype="title">śrīhastigirimāhātmyaṃ</seg>
+                  <seg type="copFor-end" subtype="saṃpūrṇa_tam">saṃpūrṇaṃ</seg></hi> &#xBF3; </ab>
+         </div>
+         <div type="translation">
+            <head>Translation</head>
+            <p>Dundubhi year, Tai month, fourth day, Saturday, constellation of Cittrā – on this
+               auspicious day, the illustrious Hastigirimāhātmya that was copied by Kiṭāmpi
+               Kṛṣṇamācāluvāsa is completed.</p>
+         </div>
+         <div >
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

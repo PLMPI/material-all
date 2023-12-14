@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/css" href="PLMPI_base.css"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="san-Latn">Periyatirumoḻi</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Hamburg, Germany</settlement>
+                  <repository>Staats- und Universitätsbibliothek (SUB), Hamburg Universität </repository>
+                  <idno>SUB_35-3170</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="san-Latn"
+                     >Periyatirumoḻi.</foreign></summary>
+               </msContents>
+               <physDesc>
+                  <p> Probably, tiru eṭavintai is an alternative spelling of Tiruviṭaventai, in turn
+                     an alternative spelling of Tiruviṭantai (south of Chennai). (2) Kṛṣṇaṃgār can
+                     be read in a modern spelling as Kiruṣṇayyaṅkār. </p>
+               </physDesc>
+            </msDesc>
+            <bibl>Cod. Palmbl. I 170 (see VOHD II,5, entry 1908)</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)"
+               replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>persons</ref> file.</p>
+            </prefixDef>
+            <prefixDef ident="img" matchPattern="([a-zA-Z]+)" replacementPattern="images.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>placeNames</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="DSC00531">
+         <graphic url="../figures/mss/SUB_353170/DSC00531.jpg" width="7952px" height="5304px"/>
+      </surface>
+      <surface xml:id="yj1a" type="glyph_year" corresp="cal:jovian">
+         <graphic url="../figures/symbols/yj1a.pdf"/>
+      </surface>
+      <surface xml:id="m">
+         <graphic url="../figures/symbols/m%C2%B0.pdf"/>
+      </surface>
+      <surface xml:id="nm">
+         <graphic url="../figures/symbols/nm.pdf"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="prose" xml:lang="mix">
+            <head>Edition</head>
+                <ab>
+               <lb type="inline" n="110v5" facs="#DSC00531"/>
+               <anchor type="date"/>
+               <date type="cyclical">
+               <note>Other possible years: <date>XY</date>, <date>XY</date>
+               </note>
+                   <seg type="date-jy" subtype="v-mk">ruki<hi rend="grantha">rotkāri</hi>
+                     <g facs="#yj1a">YJ1a</g></seg>
+                  <seg type="date-sm" subtype="v-mk">aṟpici <g facs="#m" style="ang-no">m°</g></seg>
+                  <seg type="date-t" subtype="v-mk">
+                     <num type="digit-o" >30</num> teti</seg></date>
+                   
+                   <anchor type="item"/>
+                     <seg type="copItem" subtype="title-wordMs">
+                        <seg type="title">tirumuḻi</seg>
+                        <seg type="wordMs" subtype="pustakam">po<hi rend="grantha">stakaṃ</hi></seg></seg>
+                   
+                     <anchor type="copFor"/>
+                     <seg type="copFor-end" subtype="eluti-muki">eḻuti mukiñcutu</seg> | 
+                   <anchor type="own"/>
+                 
+                     <seg type="pers" subtype="own">
+                                <persName ref="pers:pers000X" role="father">
+                              <placeName>tiru eṭavintai </placeName> tiruvā<lb type="2" n="110v6"/>ḻiyāḻvāṉ </persName> kumārar 
+           
+                           <persName ref="pers:pers000X" role="own"><hi rend="grantha"
+                              >kṛṣṇaṃgā</hi>r</persName></seg>
+                   <seg type="cop-ownItem" subtype="wordMs" n="pustakam"><hi rend="grantha"
+                           >postakaṃ</hi></seg>
+                  
+                     <anchor type="apo" />
+                     <seg type="apo">
+                        <hi rend="grantha">karakṛtam aparādham kṣantum arhanti santaḥ</hi></seg> &#xBF3; 
+               
+            </ab>
+         </div>
+
+
+
+         <div type="traslation">
+            <head>Translation</head>
+            <p>Year Rukirotkāri, month
+               of Aṟpici, 30th day, the manuscript of the Tirumuḻi is fully copied. The manuscript
+               of Kṛṣṇaṃgār, son of Tiru-eṭavintai Tiruvāḻiyāḻvāṉ. May the good ones forgive the
+               mistake made by my hand.</p>
+
+         </div>
+         
+         <div >
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

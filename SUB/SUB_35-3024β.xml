@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base_17Mar.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="san-Latn">Śivapūjāvidhānasaṃgraha</foreign>,
+               guardleaf </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Hamburg, Germany</settlement>
+                  <repository>Staats- und Universitätsbibliothek (SUB), Hamburg Universität </repository>
+                  <idno>SUB 35.3024β</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="san-Latn"
+                        >Śivapūjāvidhānasaṃgraha.</foreign></summary>
+               </msContents>
+               <physDesc>
+                  <p> (1) The name cakkarakurukaḷ could be understood to mean either caṅkarakurukaḷ
+                     or cakrakurukaḷ. (2) The form alekhitam is definitely bizarre, a mix between an
+                     aorist and a past passive participle.</p>
+               </physDesc>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+         <charDecl>
+            <glyph xml:id="YK1a">
+               <!-- <mapping type="html">&#2997;</mapping>-->
+               <figure>
+                  <graphic url="./Figures/fig1.jpg"/>
+               </figure>
+            </glyph>
+         </charDecl>
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)"
+               replacementPattern="placeNames.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>placeNames</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="fig1">
+         <graphic url="./Figures/fig1.jpg" width="1292px" height="272px"/>
+      </surface>
+      <surface xml:id="fig2">
+         <graphic url="./Figures/fig2.jpg" width="2267px" height="452px"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="mix" xml:lang="mix-Latn">
+            <head>Edition</head>
+            <lb type="inline" n="GL_29r | GL_47v" facs="to-be-filled"/>
+            <ab>
+               <anchor type="scribe"/>
+               <seg type="pers" subtype="scribe"><persName ref="pers:PSN00005" role="father"><hi rend="grantha"> vijanagaram</hi> cakkarakurukaḷ</persName> <hi rend="grantha">śrimatkumāraḥ</hi>
+                 <del hand="scribe"><supplied resp="#gici"><hi rend="grantha">vasiṣṭ</hi></supplied></del>
+                 
+                 <hi rend="grantha"> kāśyapagotrotbhava āśyāyanasūtrānuṣṭhānake</hi><lb type="2" n="GL_29r2 | GL_48r2"/><hi rend="grantha">na
+                    <persName ref="pers:PSN00004" role="scribe" ><hi rend="grantha">śrinivā</hi><damage>sena</damage></persName></hi></seg>
+               
+               <anchor type="item"/>
+               <seg type="copItem" subtype="pron-title">
+               <hi rend="grantha"><rs ref="bib:0000X">idaṃ</rs> <seg type="title">somavāravratodyāpanam</seg></hi></seg>                 
+               <anchor type="copFor"/><seg type="copFor-end" subtype="likh"><hi rend="grantha">alekhitam</hi></seg> | <anchor type="inv"/> <seg type="inv"><hi rend="grantha">śrimatṣaṇmukhas sahāyam</hi></seg> - | —
+               <hi rend="grantha">āka</hi> <del hand="scribe"><supplied resp="#gici"><hi rend="grantha">.</hi></supplied></del><hi rend="grantha">ślokam</hi> | 812 <lb n="3"/>                
+                     </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p>This <foreign xml:lang="san-Latn">Somavāravratodyāpana</foreign> was copied (alekhitam [sic!]) by Śrinivāsa, offspring of
+               the Kāśyapa gotra, performer of the Āśyāyana [sic!] sūtra, illustrious son of
+               Vijanagaram Cakkarakuru. The support of the illustrious Ṣaṇmukha. Total of verses:
+               812.</p>
+         </div>
+         <div >
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>
