@@ -1,1 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet type="text/css"  href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang=""></foreign>
+                 <!--Main title of the source -->
+            </title>
+            <author xml:id="maro">
+               <name>Mario</name>
+               <surname>Rossi</surname>
+            </author>
+            <author xml:id="mabi">
+               <name>Mario</name>
+               <surname>Bianchi</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace></pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>PLACE</settlement>
+                  <repository><!--name of the repository (library, archive, etc)--></repository>
+                  <idno><!--rep. number of the mss--></idno>
+               </msIdentifier>
+               <msContents>
+                  <summary><!--Summary information on the source -->Manuscript of the <foreign xml:lang=""></foreign>.</summary> 
+               </msContents>
+               <physDesc>
+                  <p><!--For the time being, the <p> within the physical description reports the notes on the colophons --></p>
+               </physDesc>
+            </msDesc>
+            
+         </sourceDesc>
+         
+      </fileDesc>
+      <encodingDesc>
+         
+         <projectDesc>
+              <p>The Palm-Leaf Manuscript Profiling Initiative (PLMPI). The research of the project –
+                  funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under
+                  Germany’s Excellence Strategy – EXC 2176 “Understanding Written Artefacts: Material,
+                  Interaction and Transmission in Manuscript Cultures,” project no. 390893796 – was
+                  conducted within the scope of (1) the Centre for the Study of Manuscript Cultures
+                  (CSMC) at Universität Hamburg and (2) the project Texts Surrounding Texts (TST)
+                  Satellite Stanzas, Prefaces and Colophons in South-Indian Manuscripts (collections of
+         the Paris BnF and Hamburg SUB) funded by ANR &amp; DFG (2019–2023)</p>
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official 
+       <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p></p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)" replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                  <ref>persons</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>-->
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <!--here we add all the images of glyphs, abbreviations, mss folios etc-->
+      <surface xml:id="to-be-filled">
+         <graphic url="to-be-filled"/>
+      </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="to-be-filled" subtype="to-be-filled" xml:lang="">
+            <head>Edition</head>
+            <ab>
+          <!--here we encode the colophon-->
+               </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <ab><!--here we have the translation, not marked-up for the time being--></ab>
+         </div>
+         <div>
+            <!--This <div> must always be present (as it is here, with no marked-up content), otherwise no section for the modular syntax will be displayed.-->
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>
 
