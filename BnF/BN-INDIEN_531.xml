@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="tam-Latn">Periyapurāṇam</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Paris, France</settlement>
+                  <repository>Bibliothèque nationale de France</repository>
+                  <idno>BN-INDEN 351</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="tam-Latn"
+                     >Periyapurāṇam</foreign>.</summary>
+               </msContents>
+               <physDesc>
+                  <p>Thanks to Emmanuel Francis for providing us with the reference to this colophon
+                     and a draft translation of its content. </p>
+               </physDesc>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+
+         <schemaRef type="guide" key="PLMPI_template" url="to-be-filled"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)" replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>persons</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="to-be-filled">
+         <graphic url="to-be-filled"/>
+      </surface>
+      <surface xml:id="d1">
+         <graphic url="../figures/symbols/d1.pdf"/>
+      </surface>
+      <surface xml:id="m">
+         <graphic url="../figures/symbols/m%C2%B0.pdf"/>
+      </surface>
+      <surface xml:id="yj1a">
+         <graphic url="../figures/symbols/yj1a.pdf"/>
+      </surface>
+      <surface xml:id="ym">
+         <graphic url="../figures/symbols/ym_fig.PNG"/>
+      </surface>
+      <surface xml:id="merpati">
+         <graphic url="../figures/symbols/merpati.PNG"/>
+      </surface>
+
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="prose" xml:lang="tam-Latn">
+            <head>Edition</head>
+            <ab>
+               <lb type="inline" n="359v5"/> ākat tiruviruttam &#xBF3; 4033 = <anchor type="inv"/>
+               <seg type="inv">āṟumukan tuṇai &#xBF3; civamayam &#xBF3;</seg>
+               <anchor type="date"/>
+               <date type="single-match" when="1799-04-29">
+                  <seg type="date-jy" subtype="v-mk">cittāṟti <g facs="#yj1a">YJ1a</g></seg>
+                  <seg type="date-sm" subtype="v-mk">cittirai <lb type="1" n="359v6"/>
+                     <abbr type="abbr" facs="#m">m°</abbr></seg>
+                  <seg type="date-md" subtype="v-mk"><num type="digit-c">20</num>
+                     <g facs="#d1">D1</g></seg>
+                  <seg type="date-wd" subtype="v-mk">tiṅkaḷkkiḻamaiyuñ</seg>
+                  <seg type="date-n" subtype="v-mk">cataiyanaṣṣattiramum</seg>
+                  <seg type="date-t" subtype="v"><num type="word-o">ticami</num>yuṅ</seg> kūṭiṉa
+                  cupatiṉattil </date>
+               <anchor type="scribe"/>
+               <seg type="pers" subtype="scribe"><placeName>putu<del hand="scribe">m</del><add
+                        place="below">v</add>ai</placeName> mānakarattil irukkum <persName
+                     role="father">civakurunātamutaliyār</persName> kumāraṉ <persName role="scribe"
+                     >cāmiṉātaṉ</persName>
+               </seg><lb type="1" n="359v7"/>
+               <g facs="#merpati">meṟpaṭi</g> contattukku <seg type="copFor-end" subtype="yeḻuti"
+                  >yeḻutiṉa</seg>
+               <anchor type="item"/>
+               <seg type="copItem" subtype="title">periyapurāṇam</seg>
+               <anchor type="copFor"/><seg type="copFor-end" subtype="yeḻuti">yeḻuti niṟaveṟiṉatu
+                  muttum</seg> &#xBF3; </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p>Total of 4033 tiruviruttams. Āṟumukam is the refuge. The essence of Śiva. In the
+               auspicious day when the Jovian year Cittāṟti, the month of Cittirai, the 20th day,
+               Monday, the constellation of Cataiyam and the tenth [lunar day] fall together,
+               Cāmiṉātaṉ son of Civakurunātamutaliyār who is in the great town of Putuvai fully
+               finished copying the Periyapurāṇam that is copied for the of the property (contam)
+               above mentioned. May Comacuntarēsparar be the refuge.</p>
+         </div>
+         <div>
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

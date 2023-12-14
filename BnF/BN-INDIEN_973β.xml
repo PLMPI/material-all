@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="tam-Latn">Nālaṭiyār</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Paris, France</settlement>
+                  <repository>Bibliothèque nationale de France</repository>
+                  <idno>BN-INDEN 973β</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="tam-Latn"
+                     >Nālaṭiyār</foreign>.</summary>
+               </msContents>
+               <physDesc>
+                  <p>(1) Thanks to Emmanuel Francis for providing us with the reference to this
+                     passage and a draft translation of its content. (2) In BN-INDIEN 973β,
+                     cāṟṟumīka° most probably stands for sāttvika. Interesting is the
+                     hypercorrection: the occurrence of the standard Tam. ṟṟ instead of colloquial
+                     tt betrays the fact that the word was considered to be of Tam. instead of Skt.
+                     origin. (3) BN-INDIEN 973β has a syntactic ambiguity: the date can refer to
+                     either paṭikkiṉṟa or eḻuti niṟavēriṉatu muṟṟum. We opt for the latter
+                     interpretation, but the former would also be a correct interpretation. (4) Note
+                     the peculiar way of writing the glyph ṟa, e.g. [100r3].</p>
+               </physDesc>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+         <charDecl>
+            <glyph xml:id="YK1a">
+               <!-- <mapping type="html">&#2997;</mapping>-->
+               <figure>
+                  <graphic url="./Figures/fig1.jpg"/>
+               </figure>
+            </glyph>
+         </charDecl>
+         <schemaRef type="guide" key="PLMPI_template" url="to-be-filled"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)" replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>persons</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="to-be-filled">
+         <graphic url="to-be-filled"/>
+      </surface>
+      <surface xml:id="d2">
+         <graphic url="../figures/symbols/d2.pdf"/>
+      </surface>
+      <surface xml:id="m">
+         <graphic url="../figures/symbols/m%C2%B0.pdf"/>
+      </surface>
+      <surface xml:id="yj1a">
+         <graphic url="../figures/symbols/yj1a.pdf"/>
+      </surface>
+      <surface xml:id="nalikai">
+         <graphic url="../figures/symbols/nalikai.jpg"/>
+      </surface>
+      <surface xml:id="nm">
+         <graphic url="../figures/symbols/nm.pdf"/>
+      </surface>
+      <surface xml:id="munruvican">
+         <graphic url="../figures/symbols/munruvicam.jpg"/>
+      </surface>
+      <surface xml:id="arai">
+         <graphic url="../figures/symbols/arai.jpg"/>
+      </surface>
+      <surface xml:id="kal">
+         <graphic url="../figures/symbols/kal.jpg"/>
+      </surface>
+      <surface xml:id="mukkal">
+         <graphic url="../figures/symbols/mukkal.jpg"/>
+      </surface>
+      <surface xml:id="kk-tt">
+         <graphic url="../figures/symbols/kk-tt.jpg"/>
+      </surface>
+      <surface xml:id="vum">
+         <graphic url="../figures/symbols/vum.jpg"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="prose" xml:lang="tam-Latn">
+            <head>Edition</head>
+            <ab>
+               <anchor type="date"/>
+               <lb type="inline" n="100r1"/>
+               <date type="convertible" when="1823-05-12">
+                  <seg type="date-jy" subtype="v-mk">cupāṉu <g facs="#yj1a">YJ1a</g></seg>
+                  <seg type="date-sm" subtype="v-mk">cittirai <g facs="#m">m°</g></seg>
+                  <seg type="date-md" subtype="v-mk">31 <g facs="#d2">D2</g></seg>
+                  <seg type="date-wd" subtype="v-mk">cōmavāram</seg>
+                  <seg type="date-p" subtype="v-mk">cukkilapaṣcam</seg>
+                  <seg type="date-t" subtype="v-mk"><num type="word-c">tutikai</num></seg>
+                  <seg type="date-o" subtype="mk-v"><g facs="#nalikai">nāḻikai</g>
+                     <num type="digit-c">29 <g facs="#arai">arai</g></num>
+                     <g facs="#munruvican">mūṉṟuvīcam</g>
+                  </seg>
+                  <seg type="date-n" subtype="v-mk">ṟōkaṇinaṣcattiram</seg>
+                  <seg type="date-o" subtype="mk-v"><g facs="#nalikai">nāḻikai</g> - <num
+                        type="digit-c">27</num></seg> - <seg type="date-o" subtype="v-e-mk"
+                     >atikaṇṭaṉāmayōkam</seg>
+                  <seg type="date-o" subtype="mk-v"><g facs="#nalikai">nāḻikai</g> - <num
+                        type="digit-c">14</num>
+                     <g facs="#munruvican">mūṉṟuvīcam</g></seg>
+                  <seg type="date-o" subtype="v-mk" n="karana">pālavākaraṇam</seg>
+                  <seg type="date-o" subtype="mk-v"><g facs="#nalikai">nāḻikai</g> - <num
+                        type="digit-c">2 <g facs="#arai">arai</g></num></seg> - <seg type="date-o"
+                     subtype="v-mk">kaulavākara<g facs="#nm">ṇ*m</g></seg>
+                  <lb type="1" n="100r2"/>
+                  <seg type="date-o" subtype="mk-v"><g facs="#nalikai">nāḻikai</g> - <num
+                        type="digit-c">27</num>
+                     <g facs="#munruvican">mūṉṟuvīcam</g></seg> tivi <seg type="date-o"
+                     subtype="mk-v"><g facs="#nalikai">nāḻikai</g>
+                     <num type="digit-c">8</num>
+                     <g facs="#kal">kāl</g></seg>
+                  <seg type="date-o" subtype="v">ṟāttiri</seg>
+                  <seg type="date-o" subtype="mk-v"><g facs="#nalikai">nāḻikai</g> - <num
+                        type="digit-c">8 <g facs="#munruvican">mūṉṟuvīcam</g></num></seg>
+                  <seg type="date-o" subtype="v">ṟā</seg> mēl tiyācciyam inta cupayōkacupatiṉattil
+                     <seg type="date-o" subtype="v">uti(<g facs="#kk-tt" style="ang-no"
+                     >kk/tt</g>)u</seg>
+                  <seg type="date-o" subtype="mk-v"><g facs="#nalikai">nāḻikai</g> - <num
+                        type="digit-c">22 <g facs="#mukkal">mukkāl</g></num>
+                     <abbr>ṟā</abbr></seg>
+                  <seg type="date-o" subtype="v-mk" n="laksana">kaṉṉiyālakkaṇattil</seg>
+                  <seg type="date-o" subtype="v-mk" n="velai">cāṟṟumīkavēḷaiyil</seg> - <seg
+                     type="date-o" subtype="v">rā</seg> - </date>
+               <persName role="father">ṟaṅkaya nāyakkar</persName> kumāraṉ 
+               <!--<anchor type="rec"/>-->
+               <seg type="pers" subtype="rec"><persName role="rec">cira<lb type="2" n="100r3"/>ñcīvi
+                     - vīṟacāmi</persName></seg> paṭikkiṉṟa <anchor type="item"/><seg type="copItem"
+                  subtype="title">nālaṭiyār</seg>
+               <anchor type="copFor"/><seg type="copFor-end" subtype="eḻuti-muṟṟ">eḻuti niṟavēriṉatu
+                  muṟṟum</seg> - tīṟkāyicu uṇṭāka tāka<g facs="#vum">vum</g> upāttiyār <anchor
+                  type="scribe"/><seg type="pers" subtype="scribe"><persName role="scribe"
+                     >aṇṇāmalai</persName></seg><anchor type="copFor"/>
+               <seg type="copFor-end" subtype="eḻuti">eḻutiṉatu</seg> &#xBF3; </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p>Jovian year Cupāṉu, month of Cittirai, 31st, Monday, bright fortnight, third [lunar
+               day], 29 nāḻikais in the constellation of ṟōkaṇi, 27 nāḻikais in the yōkam called
+               Atikaṇṭam, 14 3/16 nāḻikais in the karaṇam of Pālavā, 2 ½ nāḻikais in the karaṇam
+               (°karaṇam) of Kaulavā, 27 3/16 nāḻikais in the day (tivi), 8 ¼ nāḻikais in the night
+               (ṟāttiri), tiyācciyam on the 8 3/16 nāḻikais at night (ṟā) – in this auspicious day
+               with an auspicious conjunction [of calendrical elements]; at dawn (utittu), 22 ¾
+               nāḻikais at night (ṟā) – in the Kaṉṉiyā lakkaṇam; in the Cāṟṟumīkam vēḷai at night;
+               the Nālaṭiyār, which was recited (paṭikkiṉṟa) by Cirañcīvi Vīṟacāmi son of
+               Ṟaṅkayanāyakkar, was fully copied and completed. It is desirable to have a long life
+               (tīṟkāyicu, read tīrkkāyucu). The teacher (upāttiyār) Aṇṇāmalai copied it</p>
+         </div>
+         <div>
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

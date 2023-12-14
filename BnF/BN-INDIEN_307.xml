@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of the <foreign xml:lang="tam-Latn">Tirukkaḻakkuṉṟapurāṇam</foreign>. </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Paris, France</settlement>
+                  <repository>Bibliothèque nationale de France</repository>
+                  <idno>BN-INDIEN 307</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="tam-Latn"
+                        >Tirukkaḻakkuṉṟapurāṇam</foreign></summary>
+               </msContents>
+               <physDesc>
+                  <p>(1) Thanks to Emmanuel Francis for providing us with the reference to this
+                     colophon and a draft translation of its content. (2) The colophon appears to be
+                     incomplete, since irukkum is usually followed by the name of the scribe or the
+                     recipient of the manuscript. </p>
+               </physDesc>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+      
+         <schemaRef type="guide" key="PLMPI_template" url="to-be-filled"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)"
+               replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>persons</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="img-INDIEN-307">
+         <graphic url="to-be-filled" />
+      </surface>
+      <surface xml:id="yj1a">
+         <graphic url="../figures/symbols/yj1a.pdf"/>
+      </surface>
+      <surface xml:id="d2">
+         <graphic url="../figures/symbols/d2.pdf"/>
+      </surface>
+      <surface xml:id="m">
+         <graphic url="../figures/symbols/m%C2%B0.pdf"/>
+      </surface>
+      <surface xml:id="aka">
+         <graphic url="../figures/symbols/%C4%81ka.jpg" width="916px" height="169px"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="prose" xml:lang="tam-Latn">
+            <head>Edition</head>
+            <ab>
+               
+               <lb type="inline" n="145v1"/>
+               <anchor type="item"/>
+               <seg type="copItem" subtype="title">curakurucarukka</seg>
+               <anchor type="copFor"/><seg type="copFor-end"
+                  subtype="muṟṟ">muṟṟum</seg> &#xBF3; <g facs="aka">āka</g>t tiruviruttam 832
+               &#xBF3; 
+               <anchor type="inv"/><seg type="inv">civamayam</seg> &#xBF3; <lb type="1" n="145v2"/>
+               <seg type="inv">kurupātan tuṇai</seg> &#xBF3; 
+               <anchor type="date"/>
+               <date type="single-match" when="1786-08-01"><seg type="date-jy" subtype="v-mk"
+                  >parāpava <g facs="#yj1a"> YJ1a</g></seg>
+               <seg type="date-sm" subtype="v-mk">āṭi <abbr type="abbr" facs="#m">m°</abbr></seg>
+               <seg type="date-md" subtype="v-mk"><num type="digit-o" >20</num><g
+                     facs="#d2">D2</g></seg>
+               <seg type="date-t" subtype="v"><num type="word-c">cattamiyum</num></seg>
+               <seg type="date-wd" subtype="v-mk">maṅkaḷavāramum</seg>
+               <lb type="1" n="145v3"/>
+                  <seg type="date-n" subtype="v-mk">cuvātinaṣṣetiramuṅ</seg> kūṭiṉa cupatiṉattil</date>
+                  <placeName>putuvainakariṉil</placeName> irukkum </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p>The Curakurucarukkam is complete. Total tiruviruttam 832. the essence of Śiva. The
+               foot of the teacher is the support. In the auspicious day when Jovian year Pārapava,
+               month of Āṭi, 20th day, seventh [lunar day], Tuesday and the constellation of Cuvāti
+               fall together, [personal name?] who is in the town of Putuvai.</p>
+         </div>
+         <div>
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+      </body>
+   </text>
+</TEI>

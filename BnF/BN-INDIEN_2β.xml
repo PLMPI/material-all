@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="PLMPI_base.xsl"?>
+<?xml-stylesheet href="PLMPI_base.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophon of <foreign xml:lang="tam-Latn">Caṅkaṟpanirākaraṇam</foreign>
+            </title>
+            <author xml:id="gici">
+               <name>Giovanni</name>
+               <surname>Ciotti</surname>
+            </author>
+            <author xml:id="mafr">
+               <name>Marco</name>
+               <surname>Franceschini</surname></author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Palm-Leaf Manuscript Profiling Initiative (PLMPI)</authority>
+            <pubPlace>Hamburg (Germany) and Pondicherry (India)</pubPlace>
+            <idno type="filename"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
+                     Licence. To view a copy of the licence, visit
+                     https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+                     Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+                     USA.</p>
+                  <!--     to be filled in with correct info    <p>Copyright © </p> -->
+               </licence>
+            </availability>
+            <!--  to be filled in with correct info  <date from="2020" to="2025">2020-2025</date>-->
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Paris, France</settlement>
+                  <repository>Bibliothèque nationale de France</repository>
+                  <idno>BN_INDEN-2α</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>Manuscript of the <foreign xml:lang="tam-Latn"
+                        >Caṅkaṟpanirākaraṇam</foreign> with commentary.</summary>
+               </msContents>
+               <physDesc>
+                  <p>The abbreviation ⟨tam⟩ for tam in Cit⟨tam⟩palavaṉ (cf. standard Tam.
+                     Ciṟṟampalavaṉ) is represented by the symbol . The same symbol is also found in
+                     m°⟨tam⟩ (read <foreign xml:lang="tam-Latn">mātam</foreign>): . The latter has
+                     one loop more than the former, but we assume this does not bear an extra
+                     meaning and is simply caused by the cursive style. </p>
+               </physDesc>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <!--      example from the DHARMA template for regex to retrive external links such as those for the authority lists of  names, dates, etc.-->
+            <p>The project DHARMA has received funding from the European Research Council (ERC)
+               under the European Union’s Horizon 2020 research and innovation programme (grant
+               agreement no 809994).</p>
+         </projectDesc>
+         <charDecl>
+            <glyph xml:id="YK1a">
+               <!-- <mapping type="html">&#2997;</mapping>-->
+               <figure>
+                  <graphic url="./Figures/fig1.jpg"/>
+               </figure>
+            </glyph>
+         </charDecl>
+         <schemaRef type="guide" key="PLMPI_template" url="to_be_filled_in_later"/>
+         <!-- UPDATE the link once the release is made official -->
+         <listPrefixDef>
+            <!--          <prefixDef ident="date" matchPattern="([a-zA-Z0-9]+)" replacementPattern="to_be_filled_in_later">
+              <p>Public URIs with the prefix bib to point to a Zotero Group Library named ERC-DHARMA whose data are open
+                 to the public.</p>
+           </prefixDef>-->
+            <prefixDef ident="pers" matchPattern="([a-zA-Z]+)" replacementPattern="persons.xml#$1">
+               <p>Internal URIs using the part prefix to point to person elements in the
+                     <ref>persons</ref> file.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="DSC00609">
+         <graphic url="../figures/mss/SUB_353008/DSC00609.jpg" width="7952px" height="5304px"/>
+      </surface>
+      <surface xml:id="d2">
+         <graphic url="../figures/symbols/d2.pdf"/>
+      </surface>
+      <surface xml:id="yj3" type="glyph_year" corresp="cal:jovian">
+         <graphic url="../figures/symbols/yj3.pdf"/>
+      </surface>
+      <surface xml:id="m">
+         <graphic url="../figures/symbols/m%C2%B0.pdf"/>
+      </surface>
+      <surface xml:id="t">
+         <graphic url="../figures/symbols/t%C2%B0.pdf"/>
+      </surface>
+      <surface xml:id="kku">
+         <graphic url="../figures/symbols/kku_table.pdf"/>
+      </surface>
+      <surface xml:id="ym">
+         <graphic url="../figures/symbols/ym_fig.PNG" width="936px" height="437px"/>
+      </surface>
+      <surface xml:id="yj1b">
+         <graphic url="../figures/symbols/yj1b.pdf"/>
+      </surface>
+
+   </facsimile>
+   <text>
+      <body>
+         <div type="scribeStmt" subtype="prose" xml:lang="tam-Latn">
+            <head>Edition</head>
+            <ab>
+               <anchor type="phil"/>
+               <lb type="inline" n="139v4"/> pātūr vicuvaku<damage>.</damage> cantatiyil
+               citt°palavaṉ eḻuttu &#xBF3; <seg type="inv">ñāṉatecikaṉ ṟiruvaṭikkamalame tuṇaiyākak
+                  kaṭavatu</seg> &#xBF3; <lb type="1" n="139v5"/>
+               <anchor type="date"/>
+               <date type="single-match" when="1707-01-02">
+                  <seg type="date-kay" subtype="v">kaliyukam (vac) ttu <g facs="#yj1b"
+                     >YK1b</g></seg> cellum <seg type="date-jy" subtype="v-mk"> viya <g facs="#yj3"
+                        >YJ3</g></seg>
+                  <seg type="date-sm" subtype="v-mk">tai <abbr facs="#m" type="abbr">m°</abbr></seg>
+                  <seg type="date-wd" subtype="mk-v-mk"><abbr facs="#t" type="abbr">t°</abbr> 4 <g
+                        facs="#d2">D2</g></seg>
+                  <seg type="date-n" subtype="v">
+                     <add place="below">rokaṇi<g facs="#ym">y*m</g></add></seg>
+               </date>
+               <anchor type="copFor"/>
+               <seg type="copFor-end" subtype="eḻuti-muṟṟ">eḻuti niraveṟiṉatu muttum</seg> &#xBF3;
+                  <anchor type="inv"/>
+               <seg type="inv">kuru vāḻka kuruve tuṇaiy uṇṭākak kaṭavatu</seg> &#xBF3; <lb type="1"
+                  n="139v6"/> (vac) (uninked) 
+               <anchor type="own"/> 
+               
+               <seg type="pers" subtype="own"><placeName>pommapuriyil irukkum</placeName>
+                  <persName role="own">amuṟtapāṇit tampiraṉ</persName></seg> <anchor type="phil"/>piṟiti pāttu
+               <anchor type="copFor"/>
+               <seg type="copFor-end" subtype="eḻuti">eḻu<supplied reason="illegible"
+                  >ti</supplied>tu</seg>
+            </ab>
+         </div>
+         <div type="traslation">
+            <head>Translation</head>
+            <p>The handwriting of Cittampalavaṉ [who is] in the lineage (<foreign
+                  xml:lang="tam-Latn">cantati</foreign>) of the vicuvaku (?) of Pātūr. There should
+                  (<foreign xml:lang="tam-Latn">kaṭavatu</foreign>) be the support of the
+               illustrious lotus-like feet of Ñāṉatecikaṉ. Jovian year Viya, which occurs in the
+               [gap] Kaliyuka year, month of Tai, 4th day, [constellation of] Rokaṇi (rokaṇi-y-um) –
+               [the manuscript] was fully copied. May the teacher thrive, there should (<foreign
+                  xml:lang="tam-Latn">kaṭavatu</foreign>) be the support of the teacher. Having
+               checked the copy of Amuṟtapāṇit Tampiraṉ, who is in Pommapuri, [this manuscript] was
+               copied (eḻu†ti†tu, read as <foreign xml:lang="tam-Latn">eḻutiṉatu</foreign>?).</p>
+         </div>
+
+         <div>
+            <head>Modular Syntax</head>
+            <div type="footer"/>
+         </div>
+
+      </body>
+   </text>
+</TEI>
