@@ -1,0 +1,792 @@
+
+@font-face { font-family: "IndUni-H"; src: url("https://cdn.jsdelivr.net/gh/erc-dharma/project-documentation@master/docs/fonts/IndUni-H/IndUni-H-Regular.otf") format("opentype"); }
+
+@font-face { font-family: "IndUni-H"; src: url("https://cdn.jsdelivr.net/gh/erc-dharma/project-documentation@master/docs/fonts/IndUni-H/IndUni-H-Bold.otf") format("opentype"); font-weight: bold; }
+
+@font-face { font-family: "IndUni-H"; src: url("https://cdn.jsdelivr.net/gh/erc-dharma/project-documentation@master/docs/fonts/IndUni-H/IndUni-H-Oblique.otf") format("opentype"); font-style: italic; }
+
+@font-face { font-family: "IndUni-H"; src: url("https://cdn.jsdelivr.net/gh/erc-dharma/project-documentation@master/docs/fonts/IndUni-H/IndUni-H-BoldOblique.otf") format("opentype"); font-style: italic; font-weight: bold; }
+
+html{
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+    font-family:"IndUni-H";
+}
+
+body{
+    margin-left: 10px;
+    margin-right: 10px;
+    height:750%;
+  max-width: 1200px;
+  counter-reset: footnotecounter;
+}
+
+/*a.foot {
+	text-decoration: none;
+	outline: none;
+}
+a.foot:before {
+	font-size: smaller;
+	margin-left: .5em;
+	vertical-align: super;
+		/\* sets the footnote above the baseline *\/
+	content: counter(footnotecounter);
+	counter-increment: footnotecounter;
+	/\* Add 1 to footnote *\/
+}
+
+
+span {
+	visibility: hidden;
+	position: fixed;
+	width: 12em;
+	border: 1px solid red;
+	background: blue;
+	padding: 1em;
+	top: 1em;
+	right: 1em;
+}
+a.footnote:focus + span {
+	visibility: visible;
+}*/
+
+div {
+font-family: Times, serif;
+        left: 20px;
+        padding-right: 0.2em;
+        position: relative;
+        text-align: justify;
+        /* max-width: 2000% */
+    }
+    
+ .div {
+font-family: Times, serif;
+       
+       
+        position: fixed;
+        text-align: left;
+        
+     position: relative;
+   /*left: 15px;
+   bottom: 15px;*/
+   width: 100%;
+   background-color: white;
+   color: black;
+
+    font-size: 15px;
+        /* max-width: 2000% */
+    }
+
+section{
+    font-family: Times, serif;
+        left: 30px;
+        padding-right: 0.2em;
+        position:relative;
+        text-align: left;
+        max-width: 2000%;
+    
+}
+
+.div-met{
+    font-family: Times, serif;
+        left: 50px;
+            right: 50px;
+            top: 50px;
+            bottom: 50px;
+        padding-right: 0.2em;
+        position: relative;
+        text-align: justify;
+        max-width: 2000%;
+    
+}
+
+.hovertext .second {
+         display:none;
+    }
+
+    /* Hide the first piece of text on hover */
+.hovertext:hover .first {
+         display:none;
+    }
+
+    /* Re-show the second piece of text on hover */
+
+.hovertext:hover .second {
+        display:inline;
+    }
+
+.body {
+  font-family: Times, serif;
+  text-align: justify;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-size: 300% 300%;
+  min-height: 100%; */
+}
+ 
+  
+h1 {
+  font-family: Times, serif;
+  text-align: center;
+  font-size: 23px;
+   max-width: 2000px;
+}
+
+.pauthor{
+      font-family: Times, serif;
+  text-align: center;
+  display: block;
+  font-size: 15px;
+ color: black;
+   max-width: 2000px;
+  /* white-space: pre;*/
+    
+}
+
+.pmeta {
+  font-family: Times, serif;
+  display: block;
+  font-size: 15px;
+ color: black;
+  text-align: left;
+   max-width: 1000px;
+  /* white-space: pre;*/
+    
+}
+
+.ab{  font-family: Times, serif;
+  font-size: 15px;
+/*  color: black;*/
+  text-align: justify;
+   line-height: 1;
+  max-width: 1200px;
+    display: inline;
+    
+}
+
+p {
+  font-family: Times, serif;
+  font-size: 15px;
+/*  color: black;*/
+  text-align: justify;
+   line-height: 1;
+  max-width: 1200px;
+    display: inline;
+
+  /* white-space: pre;*/
+  }
+  
+.note{
+      font-family: Times, serif;
+  display: block;
+  font-size: 15px;
+ color: black;
+  text-align: left;
+   max-width: 1000px;
+    
+}
+
+ .verse{
+  font-family: Times, serif;
+  font-size: 15px;
+  text-align: left;
+  display: table;
+  margin-left: 25px; /* determines the distance from the left margin; serves as indentation for versed lines in colophon */
+  margin-bottom: 0px; /* determins the distance with the following element, generally a <p/> in xml */
+   /*  margin: 0 auto; */
+
+  }
+  
+   .verse1{
+  font-family: Times, serif;
+  font-size: 15px;
+  text-align: left;
+  display: table;
+  margin-left: 25px; /* determines the distance from the left margin; serves as indentation for versed lines in colophon */
+  margin-bottom: 0px; /* determins the distance with the following element, generally a <p/> in xml */
+   /*  margin: 0 auto; */
+   color: #C0C0C0;
+  font-weight: lighter;
+  }
+  
+ 
+.linebeg{ 
+font-family: Times, serif;
+    color: black;
+    position: relative;
+    padding: 0.1em;
+    text-decoration: none;
+  /*  font-weight: bold;*/
+    height: 75px;
+/*    background: #f0f0f5;
+    border-radius: 50%;
+    border-right: 1px solid black;
+    border-left: 1px solid black; */
+    padding-right: 2px;
+    padding-left: 2px;  
+    
+    
+}
+
+
+/* source: https://codepen.io/craigshoemaker/pen/YzGpWNz */
+details{
+font-family: Times, serif;
+  display: inline;
+   padding: 1em;
+  font-size: 0.8em;
+}
+summary {
+  cursor: pointer;
+  outline: none;
+}
+details[open] {
+  /* display: contents; */
+  position: relative;
+  border: 1px solid #eee;
+  font-size: 0.8em;
+  padding: 0.25em;
+  background-color: #fff;
+  -webkit-box-shadow: 2px 2px 4px -4px rgba(0, 0, 0, 0.43);
+  box-shadow: 2px 2px 4px -4px rgba(0, 0, 0, 0.43);
+}
+.pencil{
+      font-family: Times, serif;
+ text-decoration: none; 
+/* trovare un dispalu più significativo di pencil -- grassetto + corsivo potrebbe bastare? */
+    
+}
+
+.del {
+     font-family: Times, serif;
+ text-decoration: none; 
+ 
+    
+}
+
+.ins{
+       text-decoration: none; 
+      opacity: 1;
+}
+
+
+.ins-sup{
+ font-family: Times, serif;
+ text-decoration: none; 
+ vertical-align: super;
+ font-size: 0.8em; 
+color: black;
+    
+    
+}
+
+.ins-sub{
+ font-family: Times, serif;
+ text-decoration: none; 
+vertical-align: sub;
+     font-size: 0.8em;
+color: black;
+    
+}
+
+
+.tei-header{
+  /*  font-family: Times, serif;
+  font-size: 15px;
+  color: #2F4F4F;  
+  text-align: left;
+  display: block;
+    white-space: pre;*/
+  display: none;
+   
+}
+
+.text{
+    font-family: Times, serif;
+     font-size: 18px;
+     text-align: left;
+      display: block;
+    white-space: pre;
+   /*  width: 50%;
+    margin-bottom: 1px;
+    margin-left: 20%;
+    margin-right:  20%;
+    margin-top:  1px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    border: 1px solid #2F4F4F;
+    float: left;
+    border-radius: 15px;
+    min-height: 150px;
+    text-align: center;*/
+}
+
+.pages{
+  font-family: Times, serif;
+  font-size: 15px;
+  color:  #BC8F8F;
+  text-align: left;
+
+}
+
+.btn {
+font-family: Times, serif;
+  border: none;
+  background-color: inherit;
+  padding: 14px 14px;
+  font-size: 11px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {background: none;}
+
+/*.button1 {
+ background-color: w;
+border: none;
+padding: 15px 30px;
+cursor: -webkit-grabbing; cursor: grabbing;
+}  Green */
+
+
+/* hovertext general */
+
+.hovertext {
+  position: relative;
+  border-bottom: 1px green;
+  cursor:pointer;
+  width: 50%;
+  
+    color: red;
+
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  padding: .2rem .6rem .3rem;
+  width: auto;
+  background-color: white;
+  color: black;
+  text-align: left;
+  border-radius: 5px;
+  /*padding: 5px 0;*/
+  transition: opacity 1s ease-in-out;
+
+position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+  width: 175px !important;
+max-width: 175px !important;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+   font-weight: lighter;
+
+}
+
+
+/* hovertext for lg type verse */
+
+
+.hovertext1 {
+  position: relative;
+  border-bottom: 1px #F0FFFF;
+  cursor:pointer;
+  width: 50%;
+  color: #C0C0C0;
+  font-weight: lighter;
+
+}
+
+.hovertext1:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  padding: .2rem .6rem .3rem;
+   font-weight: lighter;
+  background-color: white;
+  color: black;
+  text-align: left;
+  border-radius: 5px;
+  /*padding: 5px 0;*/
+  transition: opacity 1s ease-in-out;
+
+position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+  width: 175px !important;
+max-width: 175px !important;
+}
+
+.hovertext1:hover:before {
+  opacity: 1;
+  visibility: visible;
+   font-weight: lighter;
+
+}
+
+
+
+.hovertext2:hover:before {
+  opacity: 1;
+  visibility: visible;
+   text-decoration: none;
+   
+
+}
+
+/* hovertext for page numbers [in brackets] */
+
+
+.hovertext-normal{
+  position: relative;
+  cursor:pointer;
+  width: 15%;
+  color: #C0C0C0;
+  font-weight: lighter;
+   text-decoration: none;
+
+
+}
+
+
+
+
+
+.hovertext2:hover:before {
+  opacity: 1;
+  visibility: visible;
+  text-decoration: none;
+}
+
+.hovertext2 {
+  position: relative;
+  cursor:pointer;
+  width: 15%;
+  color: #C0C0C0;
+  font-weight: lighter;
+   text-decoration: none;
+
+
+}
+
+.hovertext2:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  padding: .2rem .6rem .3rem;
+   font-weight: lighter;
+  background-color: white;
+  color: black;
+  text-align: left;
+  border-radius: 5px;
+  /*padding: 5px 0;*/
+  transition: opacity 1s ease-in-out;
+
+position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+  width: 175px !important;
+max-width: 175px !important;
+}
+
+
+
+
+
+.hovertext2:hover:before {
+  opacity: 1;
+  visibility: visible;
+  text-decoration: none;
+}
+
+
+
+/* hover-text for roles in colophons */
+
+/* role="father" */
+.hovertext-role1{
+  position: relative;
+  cursor:pointer;
+  width: 50%;
+    color:#E9967A;
+
+}
+
+.hovertext-role1:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  padding: .2rem .6rem .3rem;
+  width: auto;
+  background-color: white;
+  color: black;
+  text-align: left;
+  border-radius: 5px;
+  /*padding: 5px 0;*/
+  transition: opacity 1s ease-in-out;
+
+position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+  width: 175px !important;
+max-width: 175px !important;
+}
+
+.hovertext-role1:hover:before {
+  opacity: 1;
+  visibility: visible;
+   font-weight: lighter;
+
+}
+
+/* role="scribe" */
+
+.hovertext-role2{
+  position: relative;
+  cursor:pointer;
+  width: 50%;
+    color:#5F9EA0;
+
+}
+
+.hovertext-role2:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  padding: .2rem .6rem .3rem;
+  width: auto;
+  background-color: white;
+  color: black;
+  text-align: left;
+  border-radius: 5px;
+  /*padding: 5px 0;*/
+  transition: opacity 1s ease-in-out;
+
+position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+  width: 175px !important;
+max-width: 175px !important;
+}
+
+.hovertext-role2:hover:before {
+  opacity: 1;
+  visibility: visible;
+   font-weight: lighter;
+
+}
+
+/* role="owner" */
+
+.hovertext-role3{
+  position: relative;
+  cursor:pointer;
+  width: 50%;
+    color:#5F9EA0;
+
+}
+
+.hovertext-role3:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  padding: .2rem .6rem .3rem;
+  width: auto;
+  background-color: white;
+  color: black;
+  text-align: left;
+  border-radius: 5px;
+  /*padding: 5px 0;*/
+  transition: opacity 1s ease-in-out;
+position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+  width: 175px !important;
+max-width: 175px !important;
+}
+
+.hovertext-role3:hover:before {
+  opacity: 1;
+  visibility: visible;
+   font-weight: lighter;
+
+}
+
+/* role="guru" */
+
+.hovertext-role4{
+  position: relative;
+   cursor:pointer;
+  width: 50%;
+    color: #d4ac0d ;
+
+}
+
+.hovertext-role4:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  padding: .2rem .6rem .3rem;
+  width: auto;
+  background-color: white;
+  color: black;
+  text-align: left;
+  border-radius: 5px;
+  /*padding: 5px 0;*/
+  transition: opacity 1s ease-in-out;
+position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+  width: 175px !important;
+max-width: 175px !important;
+}
+
+.hovertext-role4:hover:before {
+  opacity: 1;
+  visibility: visible;
+   font-weight: lighter;
+
+}
+
+/* milestones in hover*/
+
+span.milestone:hover{
+background-color:#FFD700;
+background: rgba(255, 215, 0, 0.3);
+ visibility: visible;
+ }
+
+
+span.milestone:hover:before {
+  content: attr(data-hover);
+  visibility: visible;
+background: rgba(255, 215, 0, 0.3);
+  padding: .2rem .6rem .3rem;
+  width: auto;
+  background: white;
+  color: black;
+  text-align:left;
+  border-radius: 2px;
+  transition: opacity 1s ease-in-out;
+position: absolute ;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+  width: 175px !important;
+max-width: 175px !important;
+}
+
+span.milestone:hover:before {
+  opacity: 1;
+  background-color: white;
+  visibility: visible;
+   font-weight: lighter;
+
+}
+
+
+/*.hovertext-milestones{
+  position: relative;
+   cursor:pointer;
+  width: 50%;
+    color: #d4ac0d ;
+
+}
+
+.hovertext-milestones:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  padding: .2rem .6rem .3rem;
+  width: auto;
+  background: green;
+  color: #d4ac0d;
+  text-align: left;
+  border-radius: 5px;
+  /\*padding: 5px 0;*\/
+  transition: opacity 1s ease-in-out;
+position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+  width: 175px !important;
+max-width: 175px !important;
+}
+
+.hovertext-milestones:hover:before {
+  opacity: 1;
+  background-color: #c0ffc8;
+  visibility: visible;
+   font-weight: lighter;
+
+}
+
+*/
+
+
+a img { display:none; 
+text-decoration: none;
+color: yellow;
+}
+a:hover img { display:block; 
+width:150px;
+text-decoration: underline;
+}
+
+a.five:link {
+text-decoration:none;
+color: #008080;}
+a.five:visited {
+color: #008080;
+text-decoration:none;} /* this class changes the color of the link before clicking */
+a.five:hover {text-decoration:underline;}
+
+.footer{
+    position: fixed;
+   left: 15px;
+   bottom: 15px;
+   width: 100%;
+   background-color: white;
+   color: black;
+   text-align: left;
+    font-size: 15px;
+}
+
+.prose{ position: relative;
+  border-bottom: 1px #F0FFFF;
+    width: 50%;
+  color: #C0C0C0;
+  font-weight: lighter;
+    
+}
+
+.none{
+    display:none;
+}
+
+.seg1{
+
+font-weight: 900;
+    
+}
+
+.seg2{
+    text-decoration:  overline dotted red;
+    
+}
+
+
